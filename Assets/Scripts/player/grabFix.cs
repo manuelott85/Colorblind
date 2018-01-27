@@ -26,7 +26,7 @@ public class grabFix : MonoBehaviour {
 	void Update () {
         isCollidingRight = false;
         isCollidingLeft = false;
-        Debug.DrawLine(transform.position, transform.position + new Vector3(traceLenght, 0, 0));
+        //Debug.DrawLine(transform.position, transform.position + new Vector3(traceLenght, 0, 0));
         colRight1 = Physics2D.LinecastAll(transform.position, transform.position + new Vector3(traceLenght, 0, 0));
         colRight2 = Physics2D.LinecastAll(transform.position, transform.position + new Vector3(traceLenght, characterHeight, 0));
         colRight3 = Physics2D.LinecastAll(transform.position, transform.position + new Vector3(traceLenght, -characterHeight, 0));
