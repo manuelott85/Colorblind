@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4218616623109898}
   - component: {fileID: 61419322228322592}
   - component: {fileID: 114249408050567956}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: CameraDeadzone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -85,7 +85,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1096131597804550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.61, z: 0}
+  m_LocalPosition: {x: -0.589057, y: -1.340731, z: 0}
   m_LocalScale: {x: 8, y: 5, z: 1}
   m_Children:
   - {fileID: 4196917084673854}
@@ -115,7 +115,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BackGroundColor: {r: 0.9098039, g: 0.8980392, b: 0.9098039, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
