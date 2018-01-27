@@ -83,6 +83,15 @@ public class MovingPlayer : MonoBehaviour
         {
             myobj.velocity = new Vector2(myobj.velocity.x, -maxYspeed);
         }
+
+        if (GetComponent<grabFix>().getIsCollidingRight() && myobj.velocity.x > 0)
+        {
+            myobj.velocity = new Vector2(-myobj.velocity.x, myobj.velocity.y);
+        }
+        if (GetComponent<grabFix>().getIsCollidingLeft() && myobj.velocity.x < 0)
+        {
+            myobj.velocity = new Vector2(myobj.velocity.x, myobj.velocity.y);
+        }
     }
     private void FixedUpdate()
     {

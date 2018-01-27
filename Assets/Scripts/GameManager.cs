@@ -19,6 +19,50 @@ public class GameManager : MonoBehaviour {
 
     public Transform playerA, playerB, ColorCalibration;
 
+    private bool playerA_isAlive = true;
+    private bool playerA_hasInformed = false;
+    private bool playerB_isAlive = true;
+    private bool playerB_hasInformed = false;
+
+    public bool getIsAlive(bool askForPlayerOne)
+    {
+        if (askForPlayerOne)
+            return playerA_isAlive;
+        else
+            return playerB_isAlive;
+    }
+    public void revivePlayer(bool revivePlayerOne)
+    {
+        if (revivePlayerOne)
+        {
+            playerA_isAlive = true;
+            playerA_hasInformed = false;
+        }
+        else
+        {
+            playerB_isAlive = true;
+            playerB_hasInformed = false;
+        }
+    }
+    public void killPlayer(bool killPlayerOne)
+    {
+        if (killPlayerOne)
+        {
+            playerA_isAlive = false;
+        }
+        else
+        {
+            playerB_isAlive = false;
+        }
+    }
+    public void hasInformed(bool informPlayerOne)
+    {
+        if (informPlayerOne)
+            playerA_hasInformed = false;
+        else
+            playerB_hasInformed = false;
+    }
+
     private string[] inputsToLookFor = new string[] { "P1DPad_H", "P1DPad_V", "P1Btn_A", "P1Btn_B", "P2DPad_H", "P2DPad_V", "P2Btn_A", "P2Btn_B" };
     //private string[] inputsToLookFor = new string[] { "P1DPad_H" };
     private string[] inputsToLookForDavidQuickFix = new string[] { "P1DPad_H", "P1DPad_V", "P1Btn_A", "P1Btn_B"};
