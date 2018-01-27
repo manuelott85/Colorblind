@@ -61,7 +61,7 @@ public class MovingPlayer : MonoBehaviour
 
         if (Input.GetButton(forceButtonA) )
         {
-                if (myobj.velocity.y < minVelocity && myobj.velocity.y > -minVelocity)
+                if (myobj.velocity.y < minVelocity && myobj.velocity.y > -minVelocity && GetComponent<grabFix>().getIsCollidingUp()==false)
                 {
                 myobj.AddForce(new Vector2(0,  jumpForce),ForceMode2D.Impulse);
 
