@@ -47,7 +47,10 @@ public class MovingPlayer2 : MonoBehaviour
 
             myobj.AddForce(new Vector2(0, forceValueNum*force));
 
+
+            jumpCrouch++;
             Debug.Log("MOVE UP DOWN");
+              
             }
         }
 
