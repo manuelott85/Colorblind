@@ -1010,6 +1010,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isItGreen: 0
+  isItRed: 1
+  isItGrey: 0
 --- !u!114 &114205131070576724
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1023,7 +1025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_UiScaleMode: 0
   m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
+  m_ScaleFactor: 0.5
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
@@ -1442,6 +1444,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isItGreen: 1
+  isItRed: 0
+  isItGrey: 0
 --- !u!114 &114598295717648442
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1997,7 +2001,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 49c7ae1579991d4448b1e927863cc54c, type: 2}
+  - {fileID: 2100000, guid: 350265910ca256242b6f86579c53e785, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2225,7 +2229,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 0}
-  m_PlaneDistance: 0.5
+  m_PlaneDistance: 0
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0

@@ -11,7 +11,10 @@ public class updateColor : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        mat = GetComponent<SpriteRenderer>().material;
+        mat = GetComponent<Renderer>().material;
+        //if(mat == null)
+            //mat = GetComponent<SpriteRenderer>().material;
+        //Debug.Log("mat: " + mat);
     }
 	
 	// Update is called once per frame
