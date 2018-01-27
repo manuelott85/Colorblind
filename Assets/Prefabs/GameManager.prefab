@@ -222,31 +222,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3869d18605d6f574db6ddea54b6b6d77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LS_H: 
-  LS_H_Text: Move the LEFT Thumbstick UP
-  LS_V: 
-  LS_V_Text: Move the LEFT Thumbstick RIGHT
-  RS_H: 
-  RS_H_Text: Move the RIGHT Thumbstick UP
-  RS_V: 
-  RS_V_Text: Move the RIGHT Thumbstick RIGHT
-  DPad_H: 
-  DPad_H_Text: Move the DPad UPWARDS
-  DPad_V: 
-  DPad_V_Text: Move the DPad to the RIGHT
-  Btn_A: 
-  Btn_A_Text: Push Button A (XBOX) or CROSS (PS)
-  Btn_B: 
-  Btn_B_Text: Push Button B (XBOX) or CIRCLE (PS)
-  Btn_X: 
-  Btn_X_Text: Push Button X (XBOX) or SQUARE (PS)
-  Btn_Y: 
-  Btn_Y_Text: Push Button Y (XBOX) or TRIANGLE (PS)
-  Btn_LB: 
-  Btn_LB_Text: Push LEFT Bumper
-  Btn_RB: 
-  Btn_RB_Text: Push RIGHT Bumper
-  skipDPad: 0
+  green_saturation: 0
+  green_hueShift: 1
+  green_value: 1
+  red_saturation: 0
+  red_hueShift: 1
+  red_value: 1
+  playerA: {fileID: 0}
+  playerB: {fileID: 0}
+  P1DPad_H: 
+  P1DPad_H_Text: 'Player 1: Move the DPad UPWARDS'
+  P1DPad_V: 
+  P1DPad_V_Text: 'Player 1: Move the DPad to the RIGHT'
+  P2DPad_H: 
+  P2DPad_H_Text: 'Player 2: Move the DPad UPWARDS'
+  P2DPad_V: 
+  P2DPad_V_Text: 'Player 2: Move the DPad to the RIGHT'
+  P1Btn_A: 
+  P1Btn_A_Text: 'Player 1: Push Button A (XBOX) or CROSS (PS)'
+  P1Btn_B: 
+  P1Btn_B_Text: 'Player 1: Push Button B (XBOX) or CIRCLE (PS)'
+  P2Btn_A: 
+  P2Btn_A_Text: 'Player 2: Push Button A (XBOX) or CROSS (PS)'
+  P2Btn_B: 
+  P2Btn_B_Text: 'Player 2: Push Button B (XBOX) or CIRCLE (PS)'
+  onlyOneController: 1
 --- !u!222 &222024787663193858
 CanvasRenderer:
   m_ObjectHideFlags: 1
