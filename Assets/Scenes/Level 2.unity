@@ -645,22 +645,27 @@ Prefab:
     - target: {fileID: 61921449362217972, guid: 399b1e792965bef47b96f4f0cf4438e0,
         type: 2}
       propertyPath: m_Offset.x
-      value: -1.74
+      value: -1.75
       objectReference: {fileID: 0}
     - target: {fileID: 61012432026508116, guid: 399b1e792965bef47b96f4f0cf4438e0,
         type: 2}
       propertyPath: m_Offset.y
-      value: -1.74
+      value: -1.75
       objectReference: {fileID: 0}
     - target: {fileID: 61173908464700326, guid: 399b1e792965bef47b96f4f0cf4438e0,
         type: 2}
       propertyPath: m_Offset.x
-      value: 1.74
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 61741417938959580, guid: 399b1e792965bef47b96f4f0cf4438e0,
         type: 2}
       propertyPath: m_Offset.y
-      value: 1.74
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114249408050567956, guid: 399b1e792965bef47b96f4f0cf4438e0,
+        type: 2}
+      propertyPath: camSpeed
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 399b1e792965bef47b96f4f0cf4438e0, type: 2}
@@ -756,12 +761,12 @@ Prefab:
     - target: {fileID: 114667303980012750, guid: 6b8b2f214add5ea4ab28bc1aee196b3a,
         type: 2}
       propertyPath: moveForce
-      value: 75
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 114667303980012750, guid: 6b8b2f214add5ea4ab28bc1aee196b3a,
         type: 2}
       propertyPath: jumpForce
-      value: 8.5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114667303980012750, guid: 6b8b2f214add5ea4ab28bc1aee196b3a,
         type: 2}
@@ -771,12 +776,17 @@ Prefab:
     - target: {fileID: 114667303980012750, guid: 6b8b2f214add5ea4ab28bc1aee196b3a,
         type: 2}
       propertyPath: maxYspeed
-      value: 25
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114667303980012750, guid: 6b8b2f214add5ea4ab28bc1aee196b3a,
         type: 2}
       propertyPath: maxXspeed
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114667303980012750, guid: 6b8b2f214add5ea4ab28bc1aee196b3a,
+        type: 2}
+      propertyPath: YSlowFactor
+      value: 1.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b8b2f214add5ea4ab28bc1aee196b3a, type: 2}
@@ -5091,12 +5101,12 @@ Prefab:
     - target: {fileID: 114112214052807522, guid: 671267ff60073ed41882ab4fafb46658,
         type: 2}
       propertyPath: moveForce
-      value: 75
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 114112214052807522, guid: 671267ff60073ed41882ab4fafb46658,
         type: 2}
       propertyPath: jumpForce
-      value: 8.5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114112214052807522, guid: 671267ff60073ed41882ab4fafb46658,
         type: 2}
@@ -5106,12 +5116,17 @@ Prefab:
     - target: {fileID: 114112214052807522, guid: 671267ff60073ed41882ab4fafb46658,
         type: 2}
       propertyPath: maxYspeed
-      value: 25
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 114112214052807522, guid: 671267ff60073ed41882ab4fafb46658,
         type: 2}
       propertyPath: maxXspeed
       value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114112214052807522, guid: 671267ff60073ed41882ab4fafb46658,
+        type: 2}
+      propertyPath: YSlowFactor
+      value: 1.01
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 671267ff60073ed41882ab4fafb46658, type: 2}

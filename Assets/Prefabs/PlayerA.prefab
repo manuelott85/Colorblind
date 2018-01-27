@@ -99,13 +99,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8a4d3f3ae654ea43b9139a8e8ebdba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveForce: 75
-  jumpForce: 8.5
+  moveForce: 40
+  jumpForce: 10
   minVelocity: 0.001
   forceValueRL: 
   XSlowFactor: 0.9
-  YSlowFactor: 1
-  maxYspeed: 25
+  YSlowFactor: 1.01
+  maxYspeed: 30
   maxXspeed: 25
   forceButtonA: 
 --- !u!212 &212163177909102266
