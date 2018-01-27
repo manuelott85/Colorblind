@@ -130,6 +130,7 @@ public class calibration : MonoBehaviour {
                         //GameManager.instance.pirateB.GetComponent<charMovement>().updateButtons();
                         //GameManager.instance.pirateA.GetComponent<paddle>().updateAxes();
                         //GameManager.instance.pirateB.GetComponent<paddle>().updateAxes();
+                        GameManager.instance.updateControlls();
 
                         // Save the controller names to the PlayerPrefs to compare them later
                         PlayerPrefsX.SetStringArray("controllerNames", Input.GetJoystickNames());
