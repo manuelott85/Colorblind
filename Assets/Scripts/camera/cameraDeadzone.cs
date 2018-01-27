@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class cameraDeadzone : MonoBehaviour {
 
-    public float campSpeed = 1;
+    public float camSpeed = 1;
+    public float cameraHeight = 0;
 
     private Transform playerA, playerB;
     private bool playerAIsInside = true, playerBIsInside = true;
@@ -55,7 +56,7 @@ public class cameraDeadzone : MonoBehaviour {
     private void moveCam()
     {
         Vector2 centerPointBetweenPlayers = (playerA.position + playerB.position) * 0.5f;
-        transform.position = Vector2.Lerp(transform.position, centerPointBetweenPlayers, campSpeed);
+        transform.position = Vector2.Lerp(transform.position, centerPointBetweenPlayers + new Vector2(0,cameraHeight), camSpeed);
         //transform.position = centerPointBetweenPlayers;
     }
 }
