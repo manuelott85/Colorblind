@@ -101,6 +101,7 @@ public class GameManager : MonoBehaviour {
         if (onlyOneController)
             inputsToLookFor = inputsToLookForDavidQuickFix;
         LoadInput();
+        updateColors();
     }
 
     // Update is called once per frame
@@ -303,5 +304,39 @@ public class GameManager : MonoBehaviour {
         playerA.GetComponent<MovingPlayer>().forceValueUD = P1DPad_H;
         playerB.GetComponent<MovingPlayer>().forceValueRL = P2DPad_V;
         playerB.GetComponent<MovingPlayer>().forceValueUD = P2DPad_H;
+    }
+
+    public void updateColors()
+    {
+        Transform Canvas = ColorCalibration.Find("Canvas - ColorCalibration");
+        Transform red = Canvas.Find("Red_Cal");
+        Transform green = Canvas.Find("Green_Cal");
+
+        Debug.Log("updateColors " + PlayerPrefs.HasKey("green_saturation"));
+        if (PlayerPrefs.HasKey("green_saturation"))
+        {
+            green_saturation = PlayerPrefs.GetFloat("green_saturation");
+            
+        }
+        if (PlayerPrefs.HasKey("green_hueShift"))
+        {
+            green_hueShift = PlayerPrefs.GetFloat("green_hueShift");
+        }
+        if (PlayerPrefs.HasKey("green_value"))
+        {
+            green_value = PlayerPrefs.GetFloat("green_value");
+        }
+        if (PlayerPrefs.HasKey("red_saturation"))
+        {
+            red_saturation = PlayerPrefs.GetFloat("red_saturation");
+        }
+        if (PlayerPrefs.HasKey("red_hueShift"))
+        {
+            red_hueShift = PlayerPrefs.GetFloat("red_hueShift");
+        }
+        if (PlayerPrefs.HasKey("red_value"))
+        {
+            red_value = PlayerPrefs.GetFloat("red_value");
+        }
     }
 }

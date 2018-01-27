@@ -21,25 +21,43 @@ public class colorCalibration : MonoBehaviour {
     public void setSaturation(Slider slider)
     {
         mat.SetFloat("_Sat", slider.value);
-        if(isItGreen)
+        if (isItGreen)
+        {
             GameManager.instance.green_saturation = slider.value;
+            PlayerPrefs.SetFloat("green_saturation", slider.value);
+        }
         else
+        {
             GameManager.instance.red_saturation = slider.value;
+            PlayerPrefs.SetFloat("red_saturation", slider.value);
+        }
     }
     public void setValue(Slider slider)
     {
         mat.SetFloat("_Val", slider.value);
         if (isItGreen)
-            GameManager.instance.green_saturation = slider.value;
+        {
+            GameManager.instance.green_value = slider.value;
+            PlayerPrefs.SetFloat("green_value", slider.value);
+        }
         else
-            GameManager.instance.red_saturation = slider.value;
+        {
+            GameManager.instance.red_value = slider.value;
+            PlayerPrefs.SetFloat("red_value", slider.value);
+        }
     }
     public void setHueShift(Slider slider)
     {
         mat.SetFloat("_HueShift", slider.value);
         if (isItGreen)
-            GameManager.instance.green_saturation = slider.value;
+        {
+            GameManager.instance.green_hueShift = slider.value;
+            PlayerPrefs.SetFloat("green_hueShift", slider.value);
+        }
         else
-            GameManager.instance.red_saturation = slider.value;
+        {
+            GameManager.instance.red_hueShift = slider.value;
+            PlayerPrefs.SetFloat("red_hueShift", slider.value);
+        }
     }
 }
