@@ -123,6 +123,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   traceLenght: 0.5
   characterHeight: 0.5
+  characterWidth: 0.4
 --- !u!114 &114547536666174462
 MonoBehaviour:
   m_ObjectHideFlags: 1
