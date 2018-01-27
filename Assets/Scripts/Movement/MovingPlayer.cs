@@ -23,7 +23,7 @@ public class MovingPlayer : MonoBehaviour
     void Update()
     {
         myobj = GetComponent<Rigidbody2D>();
-        Debug.Log(myobj.velocity.y);
+       // Debug.Log(myobj.velocity.y);
         if (forceValueRL == "" || forceValueUD == "")
         {
             return;
