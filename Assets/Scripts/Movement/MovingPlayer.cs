@@ -38,7 +38,7 @@ public class MovingPlayer : MonoBehaviour
 
             myobj.AddForce(new Vector2(forceValueNum * moveForce, 0));
 
-            Debug.Log("MOVE RIGHT LEFT");
+           // Debug.Log("MOVE RIGHT LEFT");
         }
 
         //Moving Left and Right
@@ -56,7 +56,7 @@ public class MovingPlayer : MonoBehaviour
 
                     myobj.AddForce(new Vector2(0, forceValueNum * jumpForce),ForceMode2D.Impulse);
 
-                    Debug.Log("MOVE UP DOWN");
+                    //Debug.Log("MOVE UP DOWN");
 
                     m_isAxisInUse = true;
                 }
