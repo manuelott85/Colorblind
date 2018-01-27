@@ -26,7 +26,7 @@ public class grabFix : MonoBehaviour {
 	void Update () {
         isCollidingRight = false;
         isCollidingLeft = false;
-        //Debug.DrawLine(transform.position, transform.position + new Vector3(traceLenght, 0.5f, 0));
+        Debug.DrawLine(transform.position, transform.position + new Vector3(traceLenght, 0, 0));
         colRight1 = Physics2D.LinecastAll(transform.position, transform.position + new Vector3(traceLenght, 0, 0));
         colRight2 = Physics2D.LinecastAll(transform.position, transform.position + new Vector3(traceLenght, characterHeight, 0));
         colRight3 = Physics2D.LinecastAll(transform.position, transform.position + new Vector3(traceLenght, -characterHeight, 0));
@@ -35,32 +35,32 @@ public class grabFix : MonoBehaviour {
         colLeft3 = Physics2D.LinecastAll(transform.position, transform.position + new Vector3(-traceLenght, -characterHeight, 0));
         foreach (RaycastHit2D element in colRight1)
         {
-            if(element.transform.gameObject.layer == 0)
+            if(element.transform.gameObject.layer == 0 || element.transform.gameObject.layer == 9)
                 isCollidingRight = true;
         }
         foreach (RaycastHit2D element in colRight2)
         {
-            if (element.transform.gameObject.layer == 0)
+            if (element.transform.gameObject.layer == 0 || element.transform.gameObject.layer == 9)
                 isCollidingRight = true;
         }
         foreach (RaycastHit2D element in colRight3)
         {
-            if (element.transform.gameObject.layer == 0)
+            if (element.transform.gameObject.layer == 0 || element.transform.gameObject.layer == 9)
                 isCollidingRight = true;
         }
         foreach (RaycastHit2D element in colLeft1)
         {
-            if (element.transform.gameObject.layer == 0)
+            if (element.transform.gameObject.layer == 0 || element.transform.gameObject.layer == 9)
                 isCollidingLeft = true;
         }
         foreach (RaycastHit2D element in colLeft2)
         {
-            if (element.transform.gameObject.layer == 0)
+            if (element.transform.gameObject.layer == 0 || element.transform.gameObject.layer == 9)
                 isCollidingLeft = true;
         }
         foreach (RaycastHit2D element in colLeft3)
         {
-            if (element.transform.gameObject.layer == 0)
+            if (element.transform.gameObject.layer == 0 || element.transform.gameObject.layer == 9)
                 isCollidingLeft = true;
         }
     }
