@@ -62,7 +62,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &61831884365510548
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -96,10 +96,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1069463800793438}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c1101b9a3141ca94780db4420dab078d, type: 3}
+  m_Script: {fileID: 11500000, guid: f8a4d3f3ae654ea43b9139a8e8ebdba4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 20
+  moveForce: 20
+  jumpForce: 10
+  minVelocity: 0.001
   forceValueRL: 
   forceValueUD: 
 --- !u!212 &212883436940358718

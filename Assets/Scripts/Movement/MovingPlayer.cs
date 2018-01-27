@@ -7,6 +7,7 @@ public class MovingPlayer : MonoBehaviour
     Rigidbody2D myobj;
     public float moveForce = 20;
     public float jumpForce = 5;
+    public float minVelocity = 0.0005f;
     public string forceValueRL;
     public string forceValueUD;
     private bool m_isAxisInUse = false;
@@ -47,7 +48,7 @@ public class MovingPlayer : MonoBehaviour
             {
 
 
-                if (myobj.velocity.y == 0)
+                if (myobj.velocity.y < minVelocity && myobj.velocity.y > -minVelocity)
                 {
 
                     // Call your event function here.
