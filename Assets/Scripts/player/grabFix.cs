@@ -35,7 +35,7 @@ public class grabFix : MonoBehaviour {
         colLeft3 = Physics2D.LinecastAll(transform.position, transform.position + new Vector3(-traceLenght, -characterHeight, 0));
         foreach (RaycastHit2D element in colRight1)
         {
-            if(element.transform.gameObject.layer == 0 || element.transform.gameObject.layer == 9)
+            if (element.transform.gameObject.layer == 0 || element.transform.gameObject.layer == 9)
                 isCollidingRight = true;
         }
         foreach (RaycastHit2D element in colRight2)
