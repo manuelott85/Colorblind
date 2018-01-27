@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour {
     // singleton class
     public static GameManager instance;
 
+    public Transform playerA, playerB;
+
     private string[] inputsToLookFor = new string[] { "P1DPad_H", "P1DPad_V", "P1Btn_A", "P1Btn_B", "P2DPad_H", "P2DPad_V", "P2Btn_A", "P2Btn_B" };
     //private string[] inputsToLookFor = new string[] { "P1DPad_H" };
     private string[] inputsToLookForDavidQuickFix = new string[] { "P1DPad_H", "P1DPad_V", "P2DPad_H", "P2DPad_V", "P1Btn_A", "P1Btn_B", "P2Btn_A", "P2Btn_B" };
