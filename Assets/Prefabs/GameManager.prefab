@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4735734312831622}
   - component: {fileID: 114776604281178396}
   - component: {fileID: 114299719734478156}
+  - component: {fileID: 82806318021471978}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -94,6 +95,86 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &82806318021471978
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1226938572041822}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b7a9a244bf2ff0341809c69946494bfd, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!114 &114236633037769470
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -228,9 +309,11 @@ MonoBehaviour:
   red_saturation: 1
   red_hueShift: 0
   red_value: 1
+  grey_value: 1
   playerA: {fileID: 0}
   playerB: {fileID: 0}
   ColorCalibration: {fileID: 0}
+  lastActiveCheckpoint: {fileID: 0}
   P1DPad_H: 
   P1DPad_H_Text: 'Player 1: Move the DPad UPWARDS'
   P1DPad_V: 
@@ -247,7 +330,7 @@ MonoBehaviour:
   P2Btn_A_Text: 'Player 2: Push Button A (XBOX) or CROSS (PS)'
   P2Btn_B: 
   P2Btn_B_Text: 'Player 2: Push Button B (XBOX) or CIRCLE (PS)'
-  onlyOneController: 1
+  onlyOneController: 0
 --- !u!222 &222024787663193858
 CanvasRenderer:
   m_ObjectHideFlags: 1
