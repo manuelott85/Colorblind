@@ -222,14 +222,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3869d18605d6f574db6ddea54b6b6d77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  green_saturation: 0
-  green_hueShift: 1
+  green_saturation: 1
+  green_hueShift: 0
   green_value: 1
-  red_saturation: 0
-  red_hueShift: 1
+  red_saturation: 1
+  red_hueShift: 0
   red_value: 1
   playerA: {fileID: 0}
   playerB: {fileID: 0}
+  ColorCalibration: {fileID: 0}
   P1DPad_H: 
   P1DPad_H_Text: 'Player 1: Move the DPad UPWARDS'
   P1DPad_V: 
