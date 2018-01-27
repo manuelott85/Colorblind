@@ -228,6 +228,7 @@ MonoBehaviour:
   red_saturation: 1
   red_hueShift: 0
   red_value: 1
+  grey_value: 1
   playerA: {fileID: 0}
   playerB: {fileID: 0}
   ColorCalibration: {fileID: 0}
