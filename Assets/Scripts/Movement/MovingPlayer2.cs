@@ -34,7 +34,7 @@ public class MovingPlayer2 : MonoBehaviour
         }
 
         //Moving Left and Right
-        if (Input.GetAxis(forceValueRL) != 0)
+        if (Input.GetAxis(forceValueUD) != 0)
         {
 
             myobj = GetComponent<Rigidbody2D>();
