@@ -9,7 +9,10 @@ public class MovingPlayer : MonoBehaviour
     public float jumpForce = 5;
     public float minVelocity = 0.5f;
     public string forceValueRL;
-    public string forceValueUD;
+
+    //for Jumping 
+    public string forceButtonA;
+
     private bool m_isAxisInUse = false;
     // Use this for initialization
     void Start()
@@ -24,15 +27,13 @@ public class MovingPlayer : MonoBehaviour
     {
         myobj = GetComponent<Rigidbody2D>();
        // Debug.Log(myobj.velocity.y);
-        if (forceValueRL == "" || forceValueUD == "")
+        if (forceValueRL == ""  || forceButtonA =="")
         {
             return;
         }
         //Moving Left and Right
         if (Input.GetAxis(forceValueRL) != 0)
         {
-
-
 
             float forceValueNum = Input.GetAxis(forceValueRL);
 
@@ -42,32 +43,22 @@ public class MovingPlayer : MonoBehaviour
         }
 
         //Moving Left and Right
-        if (Input.GetAxis(forceValueUD) != 0)
+        if (Input.GetButton(forceButtonA))
         {
-            if (m_isAxisInUse == false)
-            {
-
+     
 
                 if (myobj.velocity.y < minVelocity && myobj.velocity.y > -minVelocity)
                 {
 
-                    // Call your event function here.
-                    float forceValueNum = Input.GetAxis(forceValueUD);
+                    myobj.AddForce(new Vector2(0,  jumpForce),ForceMode2D.Impulse);
 
-                    myobj.AddForce(new Vector2(0, forceValueNum * jumpForce),ForceMode2D.Impulse);
-
-                    //Debug.Log("MOVE UP DOWN");
+                    //Debug.Log("jump");
 
                     m_isAxisInUse = true;
                 }
 
+        }
 
-            }
-        }
-        else if (Input.GetAxis(forceValueUD) == 0)
-        {
-            m_isAxisInUse = false;
-        }
     }
 
 
