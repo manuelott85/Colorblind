@@ -20,6 +20,10 @@ public class MovingPlayer1 : MonoBehaviour {
 	void Update ()
 
     {
+        if (forceValueRL == "" || forceValueUD == "")
+        {
+            return;
+        }
         //Moving Left and Right
         if (Input.GetAxis(forceValueRL)!=0)
         {

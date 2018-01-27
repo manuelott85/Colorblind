@@ -21,6 +21,10 @@ public class MovingPlayer2 : MonoBehaviour
     void Update()
 
     {
+        if (forceValueRL==""||forceValueUD=="")
+        {
+            return;
+        }
         //Moving Left and Right
         if (Input.GetAxis(forceValueRL) != 0)
         {
