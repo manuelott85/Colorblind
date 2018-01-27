@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: e8eb13206a343fa4980bfcc6ccc6abba
-timeCreated: 1517047185
+timeCreated: 1517060166
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -65,10 +65,24 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline: []
+    outline:
+    - - {x: -63, y: 63}
+      - {x: -63, y: -63}
+      - {x: 63, y: -63}
+      - {x: 63, y: -31}
+      - {x: -31, y: 63}
     physicsShape: []
   spritePackingTag: 
   userData: 
