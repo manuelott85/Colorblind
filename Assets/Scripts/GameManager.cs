@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour {
     public float red_saturation = 1;
     public float red_hueShift = 0;
     public float red_value = 1;
+    public float grey_value = 1;
 
     public Transform playerA, playerB, ColorCalibration;
 
@@ -301,18 +302,15 @@ public class GameManager : MonoBehaviour {
     public void updateControlls()
     {
         playerA.GetComponent<MovingPlayer>().forceValueRL = P1DPad_V;
-        playerA.GetComponent<MovingPlayer>().forceValueUD = P1DPad_H;
+        //playerA.GetComponent<MovingPlayer>().forceValueUD = P1DPad_H;
+        playerA.GetComponent<MovingPlayer>().forceButtonA = P1Btn_A;
         playerB.GetComponent<MovingPlayer>().forceValueRL = P2DPad_V;
-        playerB.GetComponent<MovingPlayer>().forceValueUD = P2DPad_H;
+        //playerB.GetComponent<MovingPlayer>().forceValueUD = P2DPad_H;
+        playerB.GetComponent<MovingPlayer>().forceButtonA = P2Btn_A;
     }
 
     public void updateColors()
     {
-        Transform Canvas = ColorCalibration.Find("Canvas - ColorCalibration");
-        Transform red = Canvas.Find("Red_Cal");
-        Transform green = Canvas.Find("Green_Cal");
-
-        Debug.Log("updateColors " + PlayerPrefs.HasKey("green_saturation"));
         if (PlayerPrefs.HasKey("green_saturation"))
         {
             green_saturation = PlayerPrefs.GetFloat("green_saturation");
@@ -337,6 +335,10 @@ public class GameManager : MonoBehaviour {
         if (PlayerPrefs.HasKey("red_value"))
         {
             red_value = PlayerPrefs.GetFloat("red_value");
+        }
+        if (PlayerPrefs.HasKey("grey_value"))
+        {
+            grey_value = PlayerPrefs.GetFloat("grey_value");
         }
     }
 }

@@ -5,7 +5,9 @@ using UnityEngine;
 public class updateColor : MonoBehaviour {
 
     Material mat;
-    public bool isItGreen = true;
+    public bool isItGreen = false;
+    public bool isItRed = false;
+    public bool isItGrey = false;
 
     // Use this for initialization
     void Start () {
@@ -20,11 +22,15 @@ public class updateColor : MonoBehaviour {
             mat.SetFloat("_HueShift", GameManager.instance.green_hueShift);
             mat.SetFloat("_Val", GameManager.instance.green_value);
         }
-        else
+        if(isItRed)
         {
             mat.SetFloat("_Sat", GameManager.instance.red_saturation);
             mat.SetFloat("_HueShift", GameManager.instance.red_hueShift);
             mat.SetFloat("_Val", GameManager.instance.red_value);
+        }
+        if (isItGrey)
+        {
+            mat.SetFloat("_Val", GameManager.instance.grey_value);
         }
     }
 }
