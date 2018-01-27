@@ -36,31 +36,38 @@ public class MovingPlayer : MonoBehaviour
         {
             return;
         }
+        // Debug.Log("leftcollision "+GetComponent<grabFix>().getIsCollidingLeft().ToString());
+        //Debug.Log( "rightcollsion " +GetComponent<grabFix>().getIsCollidingRight().ToString());
         //Moving Left and Right
-        if (Input.GetAxis(forceValueRL) != 0)
-        {
-       
 
-            float forceValueNum = Input.GetAxis(forceValueRL);
+        float forceValueNum = Input.GetAxis(forceValueRL);
+        if (Input.GetAxis(forceValueRL) != 0 && GetComponent<grabFix>().getIsCollidingRight() == false && forceValueNum > 0  )
+        {
 
             myobj.AddForce(new Vector2(forceValueNum * moveForce, 0));
 
-           // Debug.Log("MOVE RIGHT LEFT");
+           // Debug.Log("MOVE RIGHT ");
         }
 
-        //Moving Left and Right
-        if (Input.GetButton(forceButtonA))
+        if (Input.GetAxis(forceValueRL) != 0 && GetComponent<grabFix>().getIsCollidingLeft() == false && forceValueNum < 0)
         {
-     
 
+            myobj.AddForce(new Vector2(forceValueNum * moveForce, 0));
+
+            // Debug.Log("MOVE  LEFT");
+        }
+
+        //Jump
+
+        if (Input.GetButton(forceButtonA) )
+        {
                 if (myobj.velocity.y < minVelocity && myobj.velocity.y > -minVelocity)
                 {
+                myobj.AddForce(new Vector2(0,  jumpForce),ForceMode2D.Impulse);
 
-                    myobj.AddForce(new Vector2(0,  jumpForce),ForceMode2D.Impulse);
+                //Debug.Log("jump");
 
-                    //Debug.Log("jump");
-
-                    m_isAxisInUse = true;
+                m_isAxisInUse = true;
                 }
                 
         }
@@ -84,14 +91,6 @@ public class MovingPlayer : MonoBehaviour
             myobj.velocity = new Vector2(myobj.velocity.x, -maxYspeed);
         }
 
-        if (GetComponent<grabFix>().getIsCollidingRight() && myobj.velocity.x > 0)
-        {
-            myobj.velocity = new Vector2(-myobj.velocity.x, myobj.velocity.y);
-        }
-        if (GetComponent<grabFix>().getIsCollidingLeft() && myobj.velocity.x < 0)
-        {
-            myobj.velocity = new Vector2(myobj.velocity.x, myobj.velocity.y);
-        }
     }
     private void FixedUpdate()
     {
