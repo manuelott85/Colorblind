@@ -303,8 +303,10 @@ public class GameManager : MonoBehaviour {
     {
         playerA.GetComponent<MovingPlayer>().forceValueRL = P1DPad_V;
         playerA.GetComponent<MovingPlayer>().forceValueUD = P1DPad_H;
+        playerA.GetComponent<MovingPlayer>().forceButtonA = P1Btn_A;
         playerB.GetComponent<MovingPlayer>().forceValueRL = P2DPad_V;
         playerB.GetComponent<MovingPlayer>().forceValueUD = P2DPad_H;
+        playerB.GetComponent<MovingPlayer>().forceButtonA = P2Btn_A;
     }
 
     public void updateColors()
