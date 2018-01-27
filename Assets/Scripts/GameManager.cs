@@ -35,12 +35,16 @@ public class GameManager : MonoBehaviour {
     {
         if (revivePlayerOne)
         {
+            playerB_isAlive = true;
+            playerB_hasInformed = false;
             playerA_isAlive = true;
             playerA_hasInformed = false;
             playerA.transform.gameObject.SetActive(true);
         }
         else
         {
+            playerA_isAlive = true;
+            playerA_hasInformed = false;
             playerB_isAlive = true;
             playerB_hasInformed = false;
             playerB.transform.gameObject.SetActive(true);
@@ -179,6 +183,9 @@ public class GameManager : MonoBehaviour {
             else
                 ColorCalibration.gameObject.SetActive(true);
         }
+
+        if(!playerA_isAlive && !playerB_isAlive)
+            Restart();
     }
 
     void Awake()
