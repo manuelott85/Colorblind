@@ -28,7 +28,7 @@ public class MovingPlayer2 : MonoBehaviour
 
             float forceValueNum = Input.GetAxis(forceValueRL);
 
-            myobj.AddForce(new Vector2(forceValueNum, 0));
+            myobj.AddForce(new Vector2(forceValueNum*force, 0));
 
             Debug.Log("MOVE RIGHT LEFT");
         }
@@ -41,7 +41,7 @@ public class MovingPlayer2 : MonoBehaviour
 
             float forceValueNum = Input.GetAxis(forceValueUD);
 
-            myobj.AddForce(new Vector2(0, forceValueNum));
+            myobj.AddForce(new Vector2(0, forceValueNum*force));
 
             Debug.Log("MOVE UP DOWN");
         }
