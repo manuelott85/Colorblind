@@ -9,11 +9,18 @@ public class GameManager : MonoBehaviour {
     // singleton class
     public static GameManager instance;
 
+    public float green_saturation = 0;
+    public float green_hueShift = 1;
+    public float green_value = 1;
+    public float red_saturation = 0;
+    public float red_hueShift = 1;
+    public float red_value = 1;
+
     public Transform playerA, playerB;
 
     private string[] inputsToLookFor = new string[] { "P1DPad_H", "P1DPad_V", "P1Btn_A", "P1Btn_B", "P2DPad_H", "P2DPad_V", "P2Btn_A", "P2Btn_B" };
     //private string[] inputsToLookFor = new string[] { "P1DPad_H" };
-    private string[] inputsToLookForDavidQuickFix = new string[] { "P1DPad_H", "P1DPad_V", "P2DPad_H", "P2DPad_V", "P1Btn_A", "P1Btn_B", "P2Btn_A", "P2Btn_B" };
+    private string[] inputsToLookForDavidQuickFix = new string[] { "P1DPad_H", "P1DPad_V", "P1Btn_A", "P1Btn_B"};
 
     // Gamepad mapping
     //public string LS_H = "";
@@ -58,7 +65,7 @@ public class GameManager : MonoBehaviour {
     //    public string Btn_RB_Text = "Push RIGHT Bumper";
 
     [Tooltip("If true: skip the DPad for the calibration system")]
-    /*public*/ private bool skipDPad = false;
+    public bool onlyOneController = false;
 
     // Getter and Setter for Input
     public string[] getInputsToLookFor() { return inputsToLookFor; }
@@ -91,7 +98,7 @@ public class GameManager : MonoBehaviour {
     void Start()
     {
         // QuickFix for David's Controller
-        if (skipDPad)
+        if (onlyOneController)
             inputsToLookFor = inputsToLookForDavidQuickFix;
         LoadInput();
     }
@@ -280,5 +287,13 @@ public class GameManager : MonoBehaviour {
         }
 
         return singleInputArray;
+    }
+
+    public void updateControlls()
+    {
+        playerA.GetComponent<MovingPlayer1>().forceValueRL = P1DPad_V;
+        playerA.GetComponent<MovingPlayer1>().forceValueUD = P1DPad_H;
+        playerB.GetComponent<MovingPlayer2>().forceValueRL = P2DPad_V;
+        playerB.GetComponent<MovingPlayer2>().forceValueUD = P2DPad_H;
     }
 }
