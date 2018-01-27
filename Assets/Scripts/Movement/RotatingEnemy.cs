@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RotatingEnemy : MonoBehaviour {
 
-     public float rotationValue = 20;
+    public float rotationValue = 20;
     Rigidbody2D myobj;
     // Use this for initialization
     void Start ()
