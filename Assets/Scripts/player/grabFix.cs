@@ -81,6 +81,5 @@ public class grabFix : MonoBehaviour {
             if (element.transform.gameObject.layer == 0 || element.transform.gameObject.layer == 9)
                 isCollidingUp = true;
         }
-        Debug.Log(isCollidingUp);
     }
 }
