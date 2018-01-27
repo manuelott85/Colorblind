@@ -7,6 +7,7 @@ public class MovingPlayer1 : MonoBehaviour {
     public  float force = 20;
     public string forceValueRL;
     public string forceValueUD;
+    int jumpCrouch = 0;
     // Use this for initialization
     void Start ()
 
@@ -35,14 +36,20 @@ public class MovingPlayer1 : MonoBehaviour {
         //Moving Left and Right
         if (Input.GetAxis(forceValueUD) != 0)
         {
+            if (jumpCrouch==0)
+            {
 
+          
             myobj = GetComponent<Rigidbody2D>();
 
             float forceValueNum = Input.GetAxis(forceValueUD);
 
             myobj.AddForce(new Vector2(0, forceValueNum*force));
 
+
+            jumpCrouch++;
             Debug.Log("MOVE UP DOWN");
+            }
         }
 
     }
