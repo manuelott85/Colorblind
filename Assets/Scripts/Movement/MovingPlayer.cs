@@ -10,6 +10,10 @@ public class MovingPlayer : MonoBehaviour
     public float minVelocity = 0.5f;
     public string forceValueRL;
 
+    public float XSlowFactor = 1;
+    public float YSlowFactor = 1;
+    public float maxYspeed = 20;
+    public float maxXspeed = 20;
     //for Jumping 
     public string forceButtonA;
 
@@ -26,6 +30,7 @@ public class MovingPlayer : MonoBehaviour
     void Update()
     {
         myobj = GetComponent<Rigidbody2D>();
+        
        // Debug.Log(myobj.velocity.y);
         if (forceValueRL == ""  || forceButtonA =="")
         {
@@ -34,6 +39,7 @@ public class MovingPlayer : MonoBehaviour
         //Moving Left and Right
         if (Input.GetAxis(forceValueRL) != 0)
         {
+       
 
             float forceValueNum = Input.GetAxis(forceValueRL);
 
@@ -56,9 +62,32 @@ public class MovingPlayer : MonoBehaviour
 
                     m_isAxisInUse = true;
                 }
+                
+        }
+        // Handling Max Speed 
 
+        if (myobj.velocity.x > maxXspeed)
+        {
+            myobj.velocity = new Vector2(maxXspeed, myobj.velocity.y);
+        }
+        else if (myobj.velocity.x < -maxXspeed)
+        {
+            myobj.velocity = new Vector2(-maxXspeed, myobj.velocity.y);
         }
 
+        if (myobj.velocity.y > maxYspeed)
+        {
+            myobj.velocity = new Vector2(myobj.velocity.x, maxYspeed);
+        }
+        else if (myobj.velocity.y < -maxYspeed)
+        {
+            myobj.velocity = new Vector2(myobj.velocity.x, -maxYspeed);
+        }
+    }
+    private void FixedUpdate()
+    {
+        myobj = GetComponent<Rigidbody2D>();
+        myobj.velocity= new Vector2(myobj.velocity.x * XSlowFactor, myobj.velocity.y * YSlowFactor);
     }
 
 
