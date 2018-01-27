@@ -9,14 +9,14 @@ public class GameManager : MonoBehaviour {
     // singleton class
     public static GameManager instance;
 
-    public float green_saturation = 0;
-    public float green_hueShift = 1;
+    public float green_saturation = 1;
+    public float green_hueShift = 0;
     public float green_value = 1;
-    public float red_saturation = 0;
-    public float red_hueShift = 1;
+    public float red_saturation = 1;
+    public float red_hueShift = 0;
     public float red_value = 1;
 
-    public Transform playerA, playerB;
+    public Transform playerA, playerB, ColorCalibration;
 
     private string[] inputsToLookFor = new string[] { "P1DPad_H", "P1DPad_V", "P1Btn_A", "P1Btn_B", "P2DPad_H", "P2DPad_V", "P2Btn_A", "P2Btn_B" };
     //private string[] inputsToLookFor = new string[] { "P1DPad_H" };
@@ -114,6 +114,14 @@ public class GameManager : MonoBehaviour {
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
+        }
+
+        if (Input.GetKeyDown(KeyCode.F9))
+        {
+            if(ColorCalibration.gameObject.activeSelf)
+                ColorCalibration.gameObject.SetActive(false);
+            else
+                ColorCalibration.gameObject.SetActive(true);
         }
     }
 
@@ -291,9 +299,9 @@ public class GameManager : MonoBehaviour {
 
     public void updateControlls()
     {
-        playerA.GetComponent<MovingPlayer1>().forceValueRL = P1DPad_V;
-        playerA.GetComponent<MovingPlayer1>().forceValueUD = P1DPad_H;
-        playerB.GetComponent<MovingPlayer2>().forceValueRL = P2DPad_V;
-        playerB.GetComponent<MovingPlayer2>().forceValueUD = P2DPad_H;
+        playerA.GetComponent<MovingPlayer>().forceValueRL = P1DPad_V;
+        playerA.GetComponent<MovingPlayer>().forceValueUD = P1DPad_H;
+        playerB.GetComponent<MovingPlayer>().forceValueRL = P2DPad_V;
+        playerB.GetComponent<MovingPlayer>().forceValueUD = P2DPad_H;
     }
 }
