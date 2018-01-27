@@ -8,7 +8,7 @@ public class cameraDeadzone : MonoBehaviour {
     public float cameraHeight = 0;
 
     private Transform playerA, playerB;
-    private bool playerAIsInside = true, playerBIsInside = true;
+    private bool playerAIsInside = false, playerBIsInside = false;
 
 	// Use this for initialization
 	void Start () {
