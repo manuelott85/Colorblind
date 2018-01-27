@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 778f2dab61755b444904145590dbdb84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  greenVersion: 0
+  greenVersion: 1
   spriteRed: {fileID: 21300000, guid: d7e90ca625275464e828a61655c7d917, type: 3}
   materialGreen: {fileID: 2100000, guid: 49c7ae1579991d4448b1e927863cc54c, type: 2}
   materialRed: {fileID: 2100000, guid: 350265910ca256242b6f86579c53e785, type: 2}
