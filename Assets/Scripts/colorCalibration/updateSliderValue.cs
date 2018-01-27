@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class updateSliderValue : MonoBehaviour {
     
-    public bool isItGreen = true;
+    public bool isItGreen = false;
+    public bool isItRed = false;
+    public bool isItGrey = false;
     public bool hueShift = false;
     public bool value = false;
     public bool saturation = false;
@@ -21,7 +23,7 @@ public class updateSliderValue : MonoBehaviour {
             if (saturation)
                 GetComponent<Slider>().value = GameManager.instance.green_saturation;
         }
-        else
+        if (isItRed)
         {
             if (hueShift)
                 GetComponent<Slider>().value = GameManager.instance.red_hueShift;
@@ -30,7 +32,12 @@ public class updateSliderValue : MonoBehaviour {
             if (saturation)
                 GetComponent<Slider>().value = GameManager.instance.red_saturation;
         }
-	}
+        if (isItGrey)
+        {
+            if (value)
+                GetComponent<Slider>().value = GameManager.instance.grey_value;
+        }
+    }
 	
 	// Update is called once per frame
 	void Update () {
