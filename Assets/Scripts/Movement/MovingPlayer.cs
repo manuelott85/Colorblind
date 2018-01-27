@@ -7,7 +7,7 @@ public class MovingPlayer : MonoBehaviour
     Rigidbody2D myobj;
     public float moveForce = 20;
     public float jumpForce = 5;
-    public float minVelocity = 0.0005f;
+    public float minVelocity = 0.5f;
     public string forceValueRL;
     public string forceValueUD;
     private bool m_isAxisInUse = false;
