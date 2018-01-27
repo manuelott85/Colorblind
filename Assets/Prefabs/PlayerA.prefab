@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 50349754638947300}
   - component: {fileID: 114667303980012750}
   - component: {fileID: 114544647384810328}
+  - component: {fileID: 114735638638679018}
   m_Layer: 8
   m_Name: PlayerA
   m_TagString: Untagged
@@ -122,6 +123,18 @@ MonoBehaviour:
   maxYspeed: 30
   maxXspeed: 25
   forceButtonA: 
+--- !u!114 &114735638638679018
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1789188712666344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed4064944f4abbb438c8832ab057e38d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayerA: 1
 --- !u!212 &212163177909102266
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour {
     public float red_value = 1;
     public float grey_value = 1;
 
-    public Transform playerA, playerB, ColorCalibration;
+    public Transform playerA, playerB, ColorCalibration, lastActiveCheckpoint;
 
     private bool playerA_isAlive = true;
     private bool playerA_hasInformed = false;
@@ -37,11 +37,13 @@ public class GameManager : MonoBehaviour {
         {
             playerA_isAlive = true;
             playerA_hasInformed = false;
+            playerA.transform.gameObject.SetActive(true);
         }
         else
         {
             playerB_isAlive = true;
             playerB_hasInformed = false;
+            playerB.transform.gameObject.SetActive(true);
         }
     }
     public void killPlayer(bool killPlayerOne)
@@ -55,12 +57,20 @@ public class GameManager : MonoBehaviour {
             playerB_isAlive = false;
         }
     }
-    public void hasInformed(bool informPlayerOne)
+    public void ackInformation(bool informPlayerOne)
     {
         if (informPlayerOne)
-            playerA_hasInformed = false;
+            playerA_hasInformed = true;
         else
-            playerB_hasInformed = false;
+            playerB_hasInformed = true;
+    }
+
+    public bool hasInformed(bool informPlayerOne)
+    {
+        if (informPlayerOne)
+            return playerA_hasInformed;
+        else
+            return playerB_hasInformed;
     }
 
     private string[] inputsToLookFor = new string[] { "P1DPad_H", "P1DPad_V", "P1Btn_A", "P1Btn_B", "P2DPad_H", "P2DPad_V", "P2Btn_A", "P2Btn_B" };
