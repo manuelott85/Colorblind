@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4023326152139194}
   - component: {fileID: 61319766014266878}
   - component: {fileID: 114631880198387200}
+  - component: {fileID: 114313350345882052}
   m_Layer: 0
   m_Name: DeadZone
   m_TagString: Untagged
@@ -66,6 +67,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.49, y: 0.6}
   m_EdgeRadius: 0
+--- !u!114 &114313350345882052
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1288148658176310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37019538918a91941a567c4e6eda485d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
 --- !u!114 &114631880198387200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -77,3 +90,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604f7b477cbbac24abeb594c9b68803b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundSourceFile: {fileID: 8300000, guid: 71fb863b159fcb346834a41376dfc25e, type: 3}
