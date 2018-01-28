@@ -22,7 +22,6 @@ public class playerAnimation : MonoBehaviour {
         velocity = rbody.velocity;
         if (GameManager.instance.getIsAlive(transform.parent.GetComponent<dieingSystem>().isPlayerA))
         {
-            transform.rotation = Quaternion.identity;
             if (velocity.x == 0 && velocity.y == 0)
                 GetComponent<Animator>().enabled = false;
             else
