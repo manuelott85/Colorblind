@@ -20,7 +20,7 @@ public class finishZone : MonoBehaviour {
     {
         if (collision.gameObject.name == "PlayerA" || collision.gameObject.name == "PlayerB")
         {
-            Application.LoadLevel("winScreenLevel");
+            Application.LoadLevel(winScreenLevel);
         }
     }
 }

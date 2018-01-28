@@ -91,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f87593d6ba3c545b075918bd2ef762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winScreenLevel: 
+  winScreenLevel: winScreen
 --- !u!212 &212651978085754478
 SpriteRenderer:
   m_ObjectHideFlags: 1
