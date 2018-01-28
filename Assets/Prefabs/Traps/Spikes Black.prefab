@@ -21,6 +21,10 @@ GameObject:
   - component: {fileID: 4360172656574178}
   - component: {fileID: 212428296354731256}
   - component: {fileID: 95773225078076376}
+  - component: {fileID: 61723726781888158}
+  - component: {fileID: 114902793560295122}
+  - component: {fileID: 114330997529101566}
+  - component: {fileID: 114083603317233598}
   m_Layer: 0
   m_Name: Spikes Black
   m_TagString: Untagged
@@ -41,6 +45,31 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61723726781888158
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1356859364766710}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.49, y: 0.6}
+    newSize: {x: 1.49, y: 0.6}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.49, y: 0.6}
+  m_EdgeRadius: 0
 --- !u!95 &95773225078076376
 Animator:
   serializedVersion: 3
@@ -58,6 +87,46 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114083603317233598
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1356859364766710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 604f7b477cbbac24abeb594c9b68803b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114330997529101566
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1356859364766710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 778f2dab61755b444904145590dbdb84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  greenVersion: 1
+  spriteRed: {fileID: 21300000, guid: 5b05ad092a5eda1409c1fdccd1484f50, type: 3}
+  materialGreen: {fileID: 2100000, guid: 49c7ae1579991d4448b1e927863cc54c, type: 2}
+  materialRed: {fileID: 2100000, guid: 350265910ca256242b6f86579c53e785, type: 2}
+--- !u!114 &114902793560295122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1356859364766710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29141dec8925c7488b90bcd0006eea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isItGreen: 0
+  isItRed: 0
+  isItGrey: 1
 --- !u!212 &212428296354731256
 SpriteRenderer:
   m_ObjectHideFlags: 1
