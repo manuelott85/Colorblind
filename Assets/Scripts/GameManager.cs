@@ -17,12 +17,16 @@ public class GameManager : MonoBehaviour {
     public float red_value = 1;
     public float grey_value = 1;
 
+    public Canvas titleScreen;
+
     public Transform playerA, playerB, ColorCalibration, lastActiveCheckpoint;
 
     private bool playerA_isAlive = true;
     private bool playerA_hasInformed = false;
     private bool playerB_isAlive = true;
     private bool playerB_hasInformed = false;
+
+    private bool showTitleScreen = true;
 
     public bool getIsAlive(bool askForPlayerOne)
     {
@@ -161,6 +165,21 @@ public class GameManager : MonoBehaviour {
             inputsToLookFor = inputsToLookForDavidQuickFix;
         LoadInput();
         updateColors();
+        if (showTitleScreen)
+            titleScreen.enabled = true;
+        if (!showTitleScreen)
+            titleScreen.enabled = false;
+    }
+
+    public void Startgame()
+    {
+        titleScreen.enabled = false;
+        showTitleScreen = false;
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 
     // Update is called once per frame
