@@ -189,8 +189,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dfa84124796bf940854ffd994f8c807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveForce: 10
-  maxMovementSpan: 400
+  moveForce: 0.1
+  maxMovementSpan: 4.5
 --- !u!212 &212515171030900262
 SpriteRenderer:
   m_ObjectHideFlags: 1

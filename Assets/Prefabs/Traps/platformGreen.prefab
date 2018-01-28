@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4653199139061628}
   - component: {fileID: 212449073186135334}
   - component: {fileID: 114288306127893362}
-  - component: {fileID: 50595860995397242}
   - component: {fileID: 61383004225438666}
   - component: {fileID: 114686839835016528}
   m_Layer: 0
@@ -44,26 +43,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50595860995397242
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1474577293629200}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 6
 --- !u!61 &61383004225438666
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -100,8 +79,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dfa84124796bf940854ffd994f8c807, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveForce: 10
-  maxMovementSpan: 50
+  moveForce: 0.1
+  maxMovementSpan: 5
 --- !u!114 &114686839835016528
 MonoBehaviour:
   m_ObjectHideFlags: 1
