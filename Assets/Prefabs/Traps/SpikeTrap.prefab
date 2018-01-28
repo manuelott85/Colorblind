@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 114215763946988858}
   - component: {fileID: 114923835962181780}
   - component: {fileID: 114602082333403504}
+  - component: {fileID: 114293508044480498}
   m_Layer: 0
   m_Name: SpikeTrap
   m_TagString: Untagged
@@ -84,6 +85,18 @@ MonoBehaviour:
   spriteRed: {fileID: 21300000, guid: d7e90ca625275464e828a61655c7d917, type: 3}
   materialGreen: {fileID: 2100000, guid: 49c7ae1579991d4448b1e927863cc54c, type: 2}
   materialRed: {fileID: 2100000, guid: 350265910ca256242b6f86579c53e785, type: 2}
+--- !u!114 &114293508044480498
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1931741622775554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37019538918a91941a567c4e6eda485d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
 --- !u!114 &114602082333403504
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,6 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604f7b477cbbac24abeb594c9b68803b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  soundSourceFile: {fileID: 8300000, guid: beedc97aa8ada664091cc66a69f6f27e, type: 3}
 --- !u!114 &114923835962181780
 MonoBehaviour:
   m_ObjectHideFlags: 1

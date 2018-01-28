@@ -8,7 +8,6 @@ public class grabFix : MonoBehaviour {
     public float characterHeight = 0.5f;
     public float characterWidth = 0.4f;
 
-    private Rigidbody2D rbody;
     private bool isCollidingRight = false;
     private bool isCollidingLeft = false;
     private bool isCollidingUp = false;
@@ -24,7 +23,7 @@ public class grabFix : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        rbody = GetComponent<Rigidbody2D>();
+
     }
 	
 	// Update is called once per frame

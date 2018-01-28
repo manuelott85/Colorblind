@@ -5,11 +5,15 @@ using UnityEngine;
 public class dieingSystem : MonoBehaviour {
 
     public bool isPlayerA = true;
+    SoundSource soundS;
+    public AudioClip respawnSound;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    // Use this for initialization
+    void Start () {
+        soundS = GetComponent<SoundSource>();
+        if (soundS != null && respawnSound != null)
+            soundS.playAudio(respawnSound, 0, transform.position, false);
+    }
 	
 	// Update is called once per frame
 	void Update () {

@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212181800968844660}
   - component: {fileID: 61891523707568418}
   - component: {fileID: 114369917466856846}
+  - component: {fileID: 114069240037653254}
   m_Layer: 2
   m_Name: Checkpoint
   m_TagString: Untagged
@@ -67,6 +68,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.49, y: 1.49}
   m_EdgeRadius: 0
+--- !u!114 &114069240037653254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1259349175175990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37019538918a91941a567c4e6eda485d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
 --- !u!114 &114369917466856846
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -79,6 +92,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activeVersion: {fileID: 21300000, guid: 431f3ee7408668a489b890fd8e769be4, type: 3}
+  reviveSound: {fileID: 8300000, guid: 38acb9acbd752fa469c15ddd3eef43b0, type: 3}
+  activeSound: {fileID: 8300000, guid: eea42882cbcf07c44b0ea1ac929ce97a, type: 3}
 --- !u!212 &212181800968844660
 SpriteRenderer:
   m_ObjectHideFlags: 1

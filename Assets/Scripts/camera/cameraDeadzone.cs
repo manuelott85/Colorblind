@@ -55,7 +55,16 @@ public class cameraDeadzone : MonoBehaviour {
 
     private void moveCam()
     {
-        Vector2 centerPointBetweenPlayers = (playerA.position + playerB.position) * 0.5f;
+        Vector2 centerPointBetweenPlayers = new Vector2(0,0);
+        if (GameManager.instance.getIsAlive(true) && GameManager.instance.getIsAlive(false))
+            centerPointBetweenPlayers = (playerA.position + playerB.position) * 0.5f;
+        else
+        {
+            if (GameManager.instance.getIsAlive(true))
+                centerPointBetweenPlayers = playerA.position;
+            else
+                centerPointBetweenPlayers = playerB.position;
+        }
         transform.position = Vector2.Lerp(transform.position, centerPointBetweenPlayers + new Vector2(0,cameraHeight), camSpeed);
         //transform.position = centerPointBetweenPlayers;
     }
