@@ -21,7 +21,7 @@ public class MovingEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        myobj = GetComponent<Rigidbody2D>();
+       // myobj = GetComponent<Rigidbody2D>();
 
  
        
@@ -40,14 +40,25 @@ public class MovingEnemy : MonoBehaviour
 
             if (moveRight == true)
             {
-                myobj.AddForce(new Vector2(moveForce, 0));
-                currentMovementSpan += moveForce;
-                // Debug.Log("MOVE RIGHT LEFT");
+
+             transform.Translate(new Vector3(moveForce,0 , 0));
+             currentMovementSpan += moveForce;
+
+            /* 
+             myobj.AddForce(new Vector2(moveForce, 0));
+             currentMovementSpan += moveForce;
+             */
+            // Debug.Log("MOVE RIGHT LEFT");
             }
             if (moveRight == false)
             {
+
+                transform.Translate(new Vector3(-moveForce, 0, 0));
+                currentMovementSpan -= moveForce;
+                /*
                 myobj.AddForce(new Vector2(-moveForce, 0));
                 currentMovementSpan -= moveForce;
+                */
             } 
           
 
