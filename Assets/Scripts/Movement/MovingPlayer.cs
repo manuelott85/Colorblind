@@ -17,13 +17,16 @@ public class MovingPlayer : MonoBehaviour
     //for Jumping 
     public string forceButtonA;
 
+    SoundSource soundS;
+    public AudioClip jumpSound;
+
     private bool m_isAxisInUse = false;
     // Use this for initialization
     void Start()
 
     {
 
-
+        soundS = GetComponent<SoundSource>();
     }
 
     // Update is called once per frame
@@ -64,12 +67,12 @@ public class MovingPlayer : MonoBehaviour
                 if (myobj.velocity.y < minVelocity && myobj.velocity.y > -minVelocity && GetComponent<grabFix>().getIsCollidingUp()==false)
                 {
                 myobj.AddForce(new Vector2(0,  jumpForce),ForceMode2D.Impulse);
-
+                if (soundS != null && jumpSound != null)
+                    soundS.playAudio(jumpSound, 0, transform.position, false);
                 //Debug.Log("jump");
 
                 m_isAxisInUse = true;
                 }
-                
         }
         // Handling Max Speed 
 

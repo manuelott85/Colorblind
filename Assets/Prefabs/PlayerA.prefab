@@ -189,6 +189,7 @@ MonoBehaviour:
   maxYspeed: 30
   maxXspeed: 25
   forceButtonA: 
+  jumpSound: {fileID: 8300000, guid: b3ed8467425d87843ac8c9dd8f9af0ce, type: 3}
 --- !u!114 &114735638638679018
 MonoBehaviour:
   m_ObjectHideFlags: 1

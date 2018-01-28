@@ -37,7 +37,7 @@ public class SoundSource : MonoBehaviour {
         AudioSource aSource = tempGO.AddComponent<AudioSource>(); // add an audio source
         aSource.clip = clip; // define the clip
         aSource.spatialize = true;
-        aSource.spatialBlend = 1.0f;
+        aSource.spatialBlend = 0.0f;
         aSource.volume = volumeLoc;
         aSource.rolloffMode = AudioRolloffMode.Linear;
         aSource.Play(); // start the sound
