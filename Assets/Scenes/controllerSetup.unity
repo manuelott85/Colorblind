@@ -2145,16 +2145,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114112956670321782, guid: 6b8b2f214add5ea4ab28bc1aee196b3a,
-        type: 2}
-      propertyPath: death
-      value: 
-      objectReference: {fileID: 9100000, guid: 5f9d277b6eea54e49855ad10a78aab07, type: 2}
-    - target: {fileID: 114735638638679018, guid: 6b8b2f214add5ea4ab28bc1aee196b3a,
-        type: 2}
-      propertyPath: deathTimeAnimation
-      value: 0.3
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6b8b2f214add5ea4ab28bc1aee196b3a, type: 2}
   m_IsPrefabParent: 0

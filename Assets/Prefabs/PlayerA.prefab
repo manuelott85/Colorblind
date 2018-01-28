@@ -154,7 +154,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walking: {fileID: 9100000, guid: 98bca56668c49084cac1d09240612a41, type: 2}
   jumping: {fileID: 9100000, guid: 45f7e87cdbc454c419b5cc290c83d6de, type: 2}
-  death: {fileID: 9100000, guid: 4cdda41a55fef57459e06d8ad38dda42, type: 2}
+  death: {fileID: 9100000, guid: 5f9d277b6eea54e49855ad10a78aab07, type: 2}
 --- !u!114 &114544647384810328
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -202,6 +202,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerA: 1
   respawnSound: {fileID: 8300000, guid: 1bdb350c8ed699c48b2b4434633d2acb, type: 3}
+  deathTimeAnimation: 0.3
 --- !u!212 &212440900528129736
 SpriteRenderer:
   m_ObjectHideFlags: 1
