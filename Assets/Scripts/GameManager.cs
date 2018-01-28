@@ -165,7 +165,7 @@ public class GameManager : MonoBehaviour {
             inputsToLookFor = inputsToLookForDavidQuickFix;
         LoadInput();
         updateColors();
-        if (showTitleScreen)
+       // if (showTitleScreen)
             titleScreen.enabled = true;
         if (!showTitleScreen)
             titleScreen.enabled = false;

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114288306127893362}
   - component: {fileID: 50595860995397242}
   - component: {fileID: 61383004225438666}
+  - component: {fileID: 114686839835016528}
   m_Layer: 0
   m_Name: platformGreen
   m_TagString: Untagged
@@ -37,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1474577293629200}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 290.43, y: -0.63, z: 0}
+  m_LocalPosition: {x: 6.91, y: 5.49, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,6 +102,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveForce: 10
   maxMovementSpan: 50
+--- !u!114 &114686839835016528
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1474577293629200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29141dec8925c7488b90bcd0006eea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isItGreen: 1
+  isItRed: 0
+  isItGrey: 0
 --- !u!212 &212449073186135334
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -115,7 +130,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 49c7ae1579991d4448b1e927863cc54c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
