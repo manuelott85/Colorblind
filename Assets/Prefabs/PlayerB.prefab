@@ -203,6 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerA: 0
   respawnSound: {fileID: 8300000, guid: 1bdb350c8ed699c48b2b4434633d2acb, type: 3}
+  deathTimeAnimation: 0.3
 --- !u!212 &212694832537363904
 SpriteRenderer:
   m_ObjectHideFlags: 1
