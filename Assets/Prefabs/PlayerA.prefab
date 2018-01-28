@@ -42,6 +42,7 @@ GameObject:
   - component: {fileID: 114667303980012750}
   - component: {fileID: 114544647384810328}
   - component: {fileID: 114735638638679018}
+  - component: {fileID: 114079394851291672}
   m_Layer: 8
   m_Name: PlayerA
   m_TagString: Untagged
@@ -128,6 +129,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114079394851291672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1789188712666344}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37019538918a91941a567c4e6eda485d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volume: 1
 --- !u!114 &114112956670321782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -188,6 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayerA: 1
+  respawnSound: {fileID: 8300000, guid: 1bdb350c8ed699c48b2b4434633d2acb, type: 3}
 --- !u!212 &212440900528129736
 SpriteRenderer:
   m_ObjectHideFlags: 1
