@@ -37,38 +37,13 @@ public class MovingBirdEnemy : MonoBehaviour
             toRightRotate = false;
 
             //Debug.Log(transform.Find("birdie_0").GetComponent<SpriteRenderer>().flipX.ToString());
-
-            if (transform.Find("birdie_0") != null)
-            {
-                transform.Find("birdie_0").GetComponent<SpriteRenderer>().flipX = true;
-            }
-
-            else if (transform.Find("birdie2_0") != null)
-
-            {
-                transform.Find("birdie2_0").GetComponent<SpriteRenderer>().flipX = true;
-            }
-    
+            transform.Find("birdie_0").GetComponent<SpriteRenderer>().flipX =true;
         }
         else if (currentRotationValue < maxRotationLeftSpan)
         {
             toRightRotate = true;
             //Debug.Log(transform.Find("birdie_0").GetComponent<SpriteRenderer>().flipX.ToString());
-
-
-            if (transform.Find("birdie_0") != null)
-            {
-                transform.Find("birdie_0").GetComponent<SpriteRenderer>().flipX = false;
-            }
-
-            else if (transform.Find("birdie2_0") != null)
-            {
-                transform.Find("birdie2_0").GetComponent<SpriteRenderer>().flipX = false;
-
-            }
-                
-          
-
+            transform.Find("birdie_0").GetComponent<SpriteRenderer>().flipX = false;
         }
 
         if (toRightRotate == true)
