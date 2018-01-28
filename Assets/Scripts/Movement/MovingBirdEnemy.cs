@@ -46,7 +46,7 @@ public class MovingBirdEnemy : MonoBehaviour
             else if (transform.Find("birdie2_0") != null)
 
             {
-                transform.Find("birdie2_0").GetComponent<SpriteRenderer>().flipX = false;
+                transform.Find("birdie2_0").GetComponent<SpriteRenderer>().flipX = true;
             }
     
         }
@@ -63,7 +63,7 @@ public class MovingBirdEnemy : MonoBehaviour
 
             else if (transform.Find("birdie2_0") != null)
             {
-                transform.Find("birdie2_0").GetComponent<SpriteRenderer>().flipX = true;
+                transform.Find("birdie2_0").GetComponent<SpriteRenderer>().flipX = false;
 
             }
                 
@@ -73,36 +73,15 @@ public class MovingBirdEnemy : MonoBehaviour
 
         if (toRightRotate == true)
         {
-            if (transform.Find("birdie_0") != null)
-            {
-                transform.Rotate(new Vector3(0, 0, rotationValue));
-                currentRotationValue += rotationValue;
-            }
-
-            else if (transform.Find("birdie2_0") != null)
-            {
-
-                transform.Rotate(new Vector3(0, 0, -rotationValue));
-                currentRotationValue -= rotationValue;
-            }
-             
+            transform.Rotate(new Vector3(0, 0, rotationValue));
+            currentRotationValue += rotationValue;
 
         }
 
         else if (toRightRotate == false)
         {
-            if (transform.Find("birdie_0") != null)
-            {
-                transform.Rotate(new Vector3(0, 0, -rotationValue));
-                currentRotationValue -= rotationValue;
-            }
-
-            else if (transform.Find("birdie2_0") != null)
-            {
-
-                transform.Rotate(new Vector3(0, 0, rotationValue));
-                currentRotationValue += rotationValue;
-            }
+            transform.Rotate(new Vector3(0, 0, -rotationValue));
+            currentRotationValue -= rotationValue;
 
         }
 
