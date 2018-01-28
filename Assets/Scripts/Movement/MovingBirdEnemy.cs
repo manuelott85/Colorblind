@@ -35,13 +35,15 @@ public class MovingBirdEnemy : MonoBehaviour
         if (currentRotationValue > maxRotationRightSpan)
         {
             toRightRotate = false;
-            
 
+            //Debug.Log(transform.Find("birdie_0").GetComponent<SpriteRenderer>().flipX.ToString());
+            transform.Find("birdie_0").GetComponent<SpriteRenderer>().flipX =true;
         }
         else if (currentRotationValue < maxRotationLeftSpan)
         {
             toRightRotate = true;
-
+            //Debug.Log(transform.Find("birdie_0").GetComponent<SpriteRenderer>().flipX.ToString());
+            transform.Find("birdie_0").GetComponent<SpriteRenderer>().flipX = false;
         }
 
         if (toRightRotate == true)
@@ -64,13 +66,14 @@ public class MovingBirdEnemy : MonoBehaviour
         if (currentXMovementSpan >= maXMovementSpan && currentXMovementSpan > 0)
         {
             moveRight = false;
+            
+
 
         }
 
         else if (currentXMovementSpan <= -maXMovementSpan && currentXMovementSpan < 0)
         {
             moveRight = true;
-
         }
 
 
