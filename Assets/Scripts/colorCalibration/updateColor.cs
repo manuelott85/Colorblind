@@ -19,6 +19,7 @@ public class updateColor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        mat = GetComponent<Renderer>().material;
         if (isItGreen)
         {
             mat.SetFloat("_Sat", GameManager.instance.green_saturation);

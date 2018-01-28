@@ -20,6 +20,8 @@ public class spiketrap : MonoBehaviour {
         {
             GetComponent<SpriteRenderer>().sprite = spriteRed;
             GetComponent<SpriteRenderer>().material = materialRed;
+            GetComponent<updateColor>().isItGreen = false;
+            GetComponent<updateColor>().isItRed = true;
         }
 
     }
