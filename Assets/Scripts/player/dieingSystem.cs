@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class dieingSystem : MonoBehaviour {
-
+    [Tooltip("Executes this script on player one or two?")]
     public bool isPlayerA = true;
-    SoundSource soundS;
+    [Tooltip("The sound played when the character dies")]
     public AudioClip respawnSound;
+
+    SoundSource soundS; // Reference to the sound source
 
     // Use this for initialization
     void Start () {
+        // Initialize the sound source (Check for a valid one; if failed: create a new one)
         soundS = GetComponent<SoundSource>();
         if (soundS != null && respawnSound != null)
             soundS.playAudio(respawnSound, 0, transform.position, false);
@@ -17,7 +20,10 @@ public class dieingSystem : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(!GameManager.instance.getIsAlive(isPlayerA) && !GameManager.instance.hasInformed(isPlayerA))
+
+        // ToDo: replace by an event driven system
+        // In case the player has just died: execute following code
+        if (!GameManager.instance.getIsAlive(isPlayerA) && !GameManager.instance.hasInformed(isPlayerA))
         {
             GameManager.instance.ackInformation(true);
 

@@ -28,6 +28,11 @@ public class GameManager : MonoBehaviour {
 
     private bool showTitleScreen = true;
 
+    /// <summary>
+    /// Return if the requested player is dead
+    /// </summary>
+    /// <param name="askForPlayerOne">Player One = true; player two = false</param>
+    /// <returns>true = is alive</returns>
     public bool getIsAlive(bool askForPlayerOne)
     {
         if (askForPlayerOne)
@@ -35,6 +40,11 @@ public class GameManager : MonoBehaviour {
         else
             return playerB_isAlive;
     }
+
+    /// <summary>
+    /// Revive the requested player
+    /// </summary>
+    /// <param name="revivePlayerOne">Player One = true; player two = false</param>
     public void revivePlayer(bool revivePlayerOne)
     {
         if (revivePlayerOne)
@@ -54,6 +64,11 @@ public class GameManager : MonoBehaviour {
             playerB.transform.gameObject.SetActive(true);
         }
     }
+
+    /// <summary>
+    /// Kill the requested player
+    /// </summary>
+    /// <param name="killPlayerOne">Player One = true; player two = false</param>
     public void killPlayer(bool killPlayerOne)
     {
         if (killPlayerOne)
@@ -65,6 +80,12 @@ public class GameManager : MonoBehaviour {
             playerB_isAlive = false;
         }
     }
+
+    // ToDo: replace by an event driven system
+    /// <summary>
+    /// This function will be called from the dieingsystem.cs after processing the equivalent code
+    /// </summary>
+    /// <param name="informPlayerOne">Player One = true; player two = false</param>
     public void ackInformation(bool informPlayerOne)
     {
         if (informPlayerOne)
@@ -73,6 +94,13 @@ public class GameManager : MonoBehaviour {
             playerB_hasInformed = true;
     }
 
+    // ToDo: replace by an event driven system
+    /// <summary>
+    /// Return if the requested player has been informed
+    /// This function is used by the dieingsystem.cs to process the equivalent code just once
+    /// </summary>
+    /// <param name="informPlayerOne">Player One = true; player two = false</param>
+    /// <returns>true = has informed</returns>
     public bool hasInformed(bool informPlayerOne)
     {
         if (informPlayerOne)
