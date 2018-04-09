@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class playerAnimation : MonoBehaviour {
-    
+
+    [TextArea(0, 20)]
+    [Tooltip("This is just a comment. This parameter is not used in game!")]
+    public string ClassDescription = "This component drives the characters animations";
+
     private Vector2 velocity;
     private float deadzone = 2;
 

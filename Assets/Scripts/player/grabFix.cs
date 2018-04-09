@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class grabFix : MonoBehaviour {
 
+    [TextArea(0, 20)]
+    [Tooltip("This is just a comment. This parameter is not used in game!")]
+    public string ClassDescription = "This component sends out raycasts to each direction to check if the character is stuck to a wall. The input script uses this information to disable the equivalent input in that case.";
+
     [Tooltip("Length of the line trace to check for collision around the player")]
+    [Range(0, 4)]
     public float traceLength = 0.5f;
     [Tooltip("The height of the player")]
+    [Range(0, 4)]
     public float characterHeight = 0.5f;
     [Tooltip("The width of the player")]
+    [Range(0, 4)]
     public float characterWidth = 0.4f;
 
     private bool isCollidingRight = false;

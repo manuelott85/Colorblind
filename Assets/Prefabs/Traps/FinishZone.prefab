@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1494541143212436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.46, y: -2.76, z: 0}
+  m_LocalPosition: {x: 404.69794, y: 3.26, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -91,6 +91,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68f87593d6ba3c545b075918bd2ef762, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClassDescription: This component loads a new scene when either player one or two
+    enters the trigger zone
   winScreenLevel: winScreen
 --- !u!212 &212651978085754478
 SpriteRenderer:

@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class killThePlayer : MonoBehaviour {
 
+    [TextArea(0,20)]
+    [Tooltip("This is just a comment. This parameter is not used in game!")]
+    public string ClassDescription = "This component looks for an attached Trigger-Collider2D. If a player enters this trigger zone, this component informs the game manager, that this player should now be considered as 'dead'. The dieingSystem process everything associated";
+
     SoundSource soundS;
     [Tooltip("The sound played when the player steps into the area")]
     public AudioClip soundSourceFile;

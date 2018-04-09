@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class dieingSystem : MonoBehaviour {
+    [TextArea(0, 20)]
+    [Tooltip("This is just a comment. This parameter is not used in game!")]
+    public string ClassDescription = "This script checks if the player should be dead. In that case, it process every step to apply 'being dead' to the player.";
+
     [Tooltip("Executes this script on player one or two?")]
     public bool isPlayerA = true;
     [Tooltip("The sound played when the character dies")]

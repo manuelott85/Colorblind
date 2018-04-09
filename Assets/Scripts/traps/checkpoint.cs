@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class checkpoint : MonoBehaviour {
 
+    [TextArea(0, 20)]
+    [Tooltip("This is just a comment. This parameter is not used in game!")]
+    public string ClassDescription = "Add this component to convert the object into a checkpoint";
+
     private bool isActive = false;
+    private SoundSource soundS;
+
+    [Tooltip("A reference to the sprite, that is used when this checkpoint gets activated")]
     public Sprite activeVersion;
+    [Tooltip("Soundclip played, when a character gets revived here")]
     public AudioClip reviveSound;
+    [Tooltip("Soundclip played, when this checkpoint gets activated")]
     public AudioClip activeSound;
-    SoundSource soundS;
 
     // Use this for initialization
     void Start () {
@@ -20,40 +28,56 @@ public class checkpoint : MonoBehaviour {
 		
 	}
 
+    /// <summary>
+    /// If a Players enters the trigger zone, activate the checkpoint if not already done
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "PlayerA" || collision.gameObject.name == "PlayerB")
+        // In case a player enters the trigger zone and it hasn't been activated: activate it
+        if ((collision.gameObject.name == "PlayerA" || collision.gameObject.name == "PlayerB") && !isActive)
         {
-            if(!isActive)
-            {
-                isActive = true;
-                GameManager.instance.lastActiveCheckpoint = transform;
-                GetComponent<SpriteRenderer>().sprite = activeVersion;
-                if (soundS != null && activeSound != null)
-                    soundS.playAudio(activeSound, 0, transform.position, false);
-            }
+            isActive = true;    // Set the checkpoint to active
+            GameManager.instance.lastActiveCheckpoint = transform;  // register self as the last activated checkpoint (the one that should be used from now on)
+            GetComponent<SpriteRenderer>().sprite = activeVersion;  // change the visual representation to the active sprite
+
+            // play the sound clip if possible
+            if (soundS != null && activeSound != null)
+                soundS.playAudio(activeSound, 0, transform.position, false);
         }
     }
 
+    /// <summary>
+    /// While a player is standing inside the trigger zone, revive the other player if he is no longer alive
+    /// </summary>
+    /// <param name="collision"></param>
     private void OnTriggerStay2D(Collider2D collision)
     {
+        // Execute when player A is in the zone and alive
         if (collision.gameObject.name == "PlayerA" && GameManager.instance.getIsAlive(true))
         {
+            // Execute when player B is dead
             if(!GameManager.instance.getIsAlive(false))
             {
-                GameManager.instance.playerB.transform.position = transform.position;
-                GameManager.instance.revivePlayer(false);
+                GameManager.instance.playerB.transform.position = transform.position; // move the character model of player B to this checkpoint
+                GameManager.instance.revivePlayer(false); // Tell the game manager to revive player B
+
+                // play the sound clip if possible
                 if (soundS != null && activeSound != null)
                     soundS.playAudio(reviveSound, 0, transform.position, false);
             }
         }
+
+        // Execute when player B is in the zone and alive
         if (collision.gameObject.name == "PlayerB" && GameManager.instance.getIsAlive(false))
         {
+            // Execute when player A is dead
             if (!GameManager.instance.getIsAlive(true))
             {
-                //GameManager.instance.playerA.transform.position = GameManager.instance.lastActiveCheckpoint.position;
-                GameManager.instance.playerA.transform.position = transform.position;
-                GameManager.instance.revivePlayer(true);
+                GameManager.instance.playerA.transform.position = transform.position;  // move the character model of player A to this checkpoint
+                GameManager.instance.revivePlayer(true); // Tell the game manager to revive player A
+
+                // play the sound clip if possible
                 if (soundS != null && activeSound != null)
                     soundS.playAudio(reviveSound, 0, transform.position, false);
             }

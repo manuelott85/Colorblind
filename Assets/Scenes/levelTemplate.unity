@@ -1169,11 +1169,6 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1397485612}
-    - target: {fileID: 223227020064543684, guid: bf3f3551ea73c474a9a5e40cded85429,
-        type: 2}
-      propertyPath: m_PlaneDistance
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf3f3551ea73c474a9a5e40cded85429, type: 2}
   m_IsPrefabParent: 0
@@ -1842,6 +1837,11 @@ Prefab:
       propertyPath: camSpeed
       value: 0.09
       objectReference: {fileID: 0}
+    - target: {fileID: 61419322228322592, guid: 399b1e792965bef47b96f4f0cf4438e0,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 399b1e792965bef47b96f4f0cf4438e0, type: 2}
   m_IsPrefabParent: 0
@@ -1850,30 +1850,11 @@ Camera:
   m_PrefabParentObject: {fileID: 20054625158150842, guid: 399b1e792965bef47b96f4f0cf4438e0,
     type: 2}
   m_PrefabInternal: {fileID: 1378925399}
---- !u!1 &1400395975 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1105322252485002, guid: bf3f3551ea73c474a9a5e40cded85429,
-    type: 2}
-  m_PrefabInternal: {fileID: 880852335}
 --- !u!4 &1400395976 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4918048081074852, guid: bf3f3551ea73c474a9a5e40cded85429,
     type: 2}
   m_PrefabInternal: {fileID: 880852335}
---- !u!114 &1400395977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1400395975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d29141dec8925c7488b90bcd0006eea7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isItGreen: 1
-  isItRed: 0
-  isItGrey: 0
 --- !u!1001 &1404844449
 Prefab:
   m_ObjectHideFlags: 0
@@ -3785,6 +3766,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d29141dec8925c7488b90bcd0006eea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClassDescription: This component will register the objects' material to the colorCalibration
+    system. Only one option can be set to true!
   isItGreen: 1
   isItRed: 0
   isItGrey: 0
@@ -15610,6 +15593,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d29141dec8925c7488b90bcd0006eea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClassDescription: This component will register the objects' material to the colorCalibration
+    system. Only one option can be set to true!
   isItGreen: 0
   isItRed: 1
   isItGrey: 0

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class finishZone : MonoBehaviour {
 
+    [TextArea(0, 20)]
+    [Tooltip("This is just a comment. This parameter is not used in game!")]
+    public string ClassDescription = "This component loads a new scene when either player one or two enters the trigger zone";
+
+    [Tooltip("Name of the scene to load (need to match with the scene manager)")]
     public string winScreenLevel = "";
 
 	// Use this for initialization
@@ -20,7 +25,8 @@ public class finishZone : MonoBehaviour {
     {
         if (collision.gameObject.name == "PlayerA" || collision.gameObject.name == "PlayerB")
         {
-            Application.LoadLevel(winScreenLevel);
+            if(winScreenLevel != null)
+                Application.LoadLevel(winScreenLevel);
         }
     }
 }
