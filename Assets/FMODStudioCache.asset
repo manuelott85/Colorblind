@@ -11,9 +11,90 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
-  EditorBanks: []
-  EditorEvents: []
-  MasterBankRef: {fileID: 0}
-  StringsBankRef: {fileID: 0}
-  stringsBankWriteTime: 0
+  EditorBanks:
+  - {fileID: 114667070307456478}
+  - {fileID: 114466494323038212}
+  - {fileID: 114460112539753704}
+  EditorEvents:
+  - {fileID: 114933827388273172}
+  MasterBankRef: {fileID: 114466494323038212}
+  StringsBankRef: {fileID: 114667070307456478}
+  stringsBankWriteTime: 636596907007675856
   cacheVersion: 2
+--- !u!114 &114460112539753704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: "C:\\Users\\R\xFCdiger Brandis\\Desktop\\GGJ Color Blind\\FMODAssets\\ColorBlindFmod\\Build\\Desktop\\Test.bank"
+  lastModified: 636596907079717259
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 3503488
+  Exists: 1
+--- !u!114 &114466494323038212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: "C:\\Users\\R\xFCdiger Brandis\\Desktop\\GGJ Color Blind\\FMODAssets\\ColorBlindFmod\\Build\\Desktop\\Master
+    Bank.bank"
+  lastModified: 636596907007635747
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 12474
+  Exists: 1
+--- !u!114 &114667070307456478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: FMODAssets\ColorBlindFmod\Build\Desktop\Master Bank.strings.bank
+  lastModified: 636596907007675856
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 768
+  Exists: 1
+--- !u!114 &114933827388273172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/ScoreLevel1
+  guid: 8ae3e20ebdddbb4695aaa3d99b94c0c3
+  Banks:
+  - {fileID: 114460112539753704}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 331702
