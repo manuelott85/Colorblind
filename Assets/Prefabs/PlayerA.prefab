@@ -57,7 +57,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1789188712666344}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.51, y: -1.0123016, z: 0}
+  m_LocalPosition: {x: 3.0999908, y: -1.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4793645029789746}
@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2cea6fb02362ae4e9ca0fa3222720c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClassDescription: This component drives the characters animations
   walking: {fileID: 9100000, guid: 98bca56668c49084cac1d09240612a41, type: 2}
   jumping: {fileID: 9100000, guid: 45f7e87cdbc454c419b5cc290c83d6de, type: 2}
   death: {fileID: 9100000, guid: 4cdda41a55fef57459e06d8ad38dda42, type: 2}
@@ -166,7 +167,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c405e0a769471ac42979f903c2a57765, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  traceLenght: 0.5
+  ClassDescription: This component sends out raycasts to each direction to check if
+    the character is stuck to a wall. The input script uses this information to disable
+    the equivalent input in that case.
+  traceLength: 0.5
   characterHeight: 0.5
   characterWidth: 0.4
 --- !u!114 &114667303980012750
@@ -183,12 +187,10 @@ MonoBehaviour:
   moveForce: 40
   jumpForce: 10
   minVelocity: 0.001
-  forceValueRL: 
   XSlowFactor: 0.9
   YSlowFactor: 1.01
   maxYspeed: 30
   maxXspeed: 25
-  forceButtonA: 
   jumpSound: {fileID: 8300000, guid: 302b46154287ab9488fd84e35af0f569, type: 3}
 --- !u!114 &114735638638679018
 MonoBehaviour:
@@ -201,6 +203,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed4064944f4abbb438c8832ab057e38d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClassDescription: This script checks if the player should be dead. In that case,
+    it process every step to apply 'being dead' to the player.
   isPlayerA: 1
   respawnSound: {fileID: 8300000, guid: 1bdb350c8ed699c48b2b4434633d2acb, type: 3}
 --- !u!212 &212440900528129736

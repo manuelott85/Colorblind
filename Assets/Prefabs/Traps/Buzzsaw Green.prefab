@@ -11,16 +11,31 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1340513897518122}
   m_IsPrefabParent: 1
---- !u!1 &1303287076783548
+--- !u!1 &1170965514403260
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
+  - component: {fileID: 4950700476629728}
+  - component: {fileID: 114907763633295810}
+  m_Layer: 0
+  m_Name: buzzSawMovementComponent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1303287076783548
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
   - component: {fileID: 4803994323376484}
   - component: {fileID: 212515171030900262}
-  - component: {fileID: 114434787915498190}
   - component: {fileID: 58596795065306096}
   - component: {fileID: 114137764275069166}
   - component: {fileID: 114187265505746984}
@@ -40,11 +55,24 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4235816774164488}
-  - component: {fileID: 50686297672759106}
-  - component: {fileID: 114874520267495344}
-  - component: {fileID: 58963102304978598}
   m_Layer: 0
   m_Name: Buzzsaw Green
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1866327710526156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4999527906751194}
+  - component: {fileID: 212492636962656004}
+  m_Layer: 0
+  m_Name: waypoint0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -57,10 +85,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1340513897518122}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.682025, y: 3.8932996, z: 0}
+  m_LocalPosition: {x: -10.682025, y: 0.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4803994323376484}
+  - {fileID: 4999527906751194}
+  - {fileID: 4950700476629728}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -74,29 +103,36 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4235816774164488}
+  m_Father: {fileID: 4950700476629728}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50686297672759106
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!4 &4950700476629728
+Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1340513897518122}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 6
+  m_GameObject: {fileID: 1170965514403260}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4803994323376484}
+  m_Father: {fileID: 4235816774164488}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4999527906751194
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1866327710526156}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.64, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4235816774164488}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &58596795065306096
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -112,21 +148,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.615
---- !u!58 &58963102304978598
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1340513897518122}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!114 &114011569494082616
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -138,6 +159,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d29141dec8925c7488b90bcd0006eea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClassDescription: This component will register the objects' material to the colorCalibration
+    system. Only one option can be set to true! Only the first material is considered
   isItGreen: 1
   isItRed: 0
   isItGrey: 0
@@ -164,33 +187,71 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604f7b477cbbac24abeb594c9b68803b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ClassDescription: This component looks for an attached Trigger-Collider2D. If a
+    player enters this trigger zone, this component informs the game manager, that
+    this player should now be considered as 'dead'. The dieingSystem process everything
+    associated
   soundSourceFile: {fileID: 0}
---- !u!114 &114434787915498190
+--- !u!114 &114907763633295810
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1303287076783548}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dfa84124796bf940854ffd994f8c807, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveForce: 10
-  maxMovementSpan: 50
---- !u!114 &114874520267495344
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1340513897518122}
+  m_GameObject: {fileID: 1170965514403260}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dfa84124796bf940854ffd994f8c807, type: 3}
+  m_Script: {fileID: 11500000, guid: a432411f48d72ef4a8ea44f635e3f949, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveForce: 0.1
-  maxMovementSpan: 4.5
+  moveForce: 5
+  waypointAffirmDeadzone: 0.03
+  shouldCircle: 1
+  waypointArray:
+  - {fileID: 4999527906751194}
+--- !u!212 &212492636962656004
+SpriteRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1866327710526156}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: c957ea41b15870742a8f17400a1095c7, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 2.87, y: 4.4}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!212 &212515171030900262
 SpriteRenderer:
   m_ObjectHideFlags: 1
