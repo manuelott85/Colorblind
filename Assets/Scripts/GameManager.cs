@@ -24,6 +24,9 @@ public class GameManager : MonoBehaviour {
     public Transform playerB;
     public Transform ColorCalibration;
     public Transform lastActiveCheckpoint;
+    [Space(5)]
+    [SerializeField]
+    private ctrlLayoutTemplate[] layoutArray;
 
     private bool playerA_isAlive = true;
     private bool playerA_hasInformed = false;
@@ -279,71 +282,41 @@ public class GameManager : MonoBehaviour {
 
         // Check each connected controller if it is a "known" product, if it is: use static values
         // if both players have a valid controller connected, skip manual calibration process
-        for (int i = 0; i < Input.GetJoystickNames().Length; i++)
+        for (int ctrlIndex = 0; ctrlIndex < Input.GetJoystickNames().Length; ctrlIndex++) // for each controller
         {
-            // "Controller (Xbox One For Windows)"
-            if (Input.GetJoystickNames()[i] == "Controller (Xbox One For Windows)")
+            for (int layoutIndex = 0; layoutIndex < layoutArray.Length; layoutIndex++)  // for each layout
             {
-                // Check for PlayerA
-                if (i == 0 && !playerAIsSet)
+                // if connected controller matches the current tested layout
+                if (Input.GetJoystickNames()[ctrlIndex] == layoutArray[layoutIndex].controllerName)
                 {
-                    P1DPad_H = "Joystick1Axis2";
-                    P1DPad_V = "Joystick1Axis1";
-                    P1Btn_A = "Joystick1Button0";
-                    P1Btn_B = "Joystick1Button1";
-                    playerAIsSet = true;
-
-                    // if there is only on controller connected and debugging is activated
-                    if (Input.GetJoystickNames().Length == 1 && onlyOneController)
+                    // Check for PlayerA
+                    if (ctrlIndex == 0 && !playerAIsSet)
                     {
-                        P2DPad_H = "Joystick1Axis5";
-                        P2DPad_V = "Joystick1Axis4";
-                        P2Btn_A = "Joystick1Button2";
-                        P2Btn_B = "Joystick1Button3";
+                        P1DPad_H = layoutArray[layoutIndex].P1DPad_H;
+                        P1DPad_V = layoutArray[layoutIndex].P1DPad_V;
+                        P1Btn_A = layoutArray[layoutIndex].P1Btn_A;
+                        P1Btn_B = layoutArray[layoutIndex].P1Btn_B;
+                        playerAIsSet = true;
+
+                        // if there is only on controller connected and debugging is activated
+                        if (Input.GetJoystickNames().Length == 1 && onlyOneController)
+                        {
+                            P2DPad_H = layoutArray[layoutIndex].P2DPad_H;
+                            P2DPad_V = layoutArray[layoutIndex].P2DPad_V;
+                            P2Btn_A = layoutArray[layoutIndex].P2Btn_A;
+                            P2Btn_B = layoutArray[layoutIndex].P2Btn_B;
+                            playerBIsSet = true;
+                        }
+                    }
+                    // Check for PlayerB
+                    if (ctrlIndex == 1 && !playerBIsSet)
+                    {
+                        P2DPad_H = layoutArray[layoutIndex].P1DPad_H.Replace("Joystick1", "Joystick2");
+                        P2DPad_V = layoutArray[layoutIndex].P1DPad_V.Replace("Joystick1", "Joystick2");
+                        P2Btn_A = layoutArray[layoutIndex].P1Btn_A.Replace("Joystick1", "Joystick2");
+                        P2Btn_B = layoutArray[layoutIndex].P1Btn_B.Replace("Joystick1", "Joystick2");
                         playerBIsSet = true;
                     }
-                }
-                // Check for PlayerB
-                if (i == 1 && !playerBIsSet)
-                {
-                    P2DPad_H = "Joystick2Axis2";
-                    P2DPad_V = "Joystick2Axis1";
-                    P2Btn_A = "Joystick2Button0";
-                    P2Btn_B = "Joystick2Button1";
-                    playerBIsSet = true;
-                }
-            }
-
-            // "Controller (Xbox One For Windows)"
-            if (Input.GetJoystickNames()[i] == "Controller (XBOX 360 For Windows)")
-            {
-                // Check for PlayerA
-                if (i == 0 && !playerAIsSet)
-                {
-                    P1DPad_H = "Joystick1Axis2";
-                    P1DPad_V = "Joystick1Axis1";
-                    P1Btn_A = "Joystick1Button0";
-                    P1Btn_B = "Joystick1Button1";
-                    playerAIsSet = true;
-
-                    // if there is only on controller connected and debugging is activated
-                    if (Input.GetJoystickNames().Length == 1 && onlyOneController)
-                    {
-                        P2DPad_H = "Joystick1Axis5";
-                        P2DPad_V = "Joystick1Axis4";
-                        P2Btn_A = "Joystick1Button2";
-                        P2Btn_B = "Joystick1Button3";
-                        playerBIsSet = true;
-                    }
-                }
-                // Check for PlayerB
-                if (i == 1 && !playerBIsSet)
-                {
-                    P2DPad_H = "Joystick2Axis2";
-                    P2DPad_V = "Joystick2Axis1";
-                    P2Btn_A = "Joystick2Button0";
-                    P2Btn_B = "Joystick2Button1";
-                    playerBIsSet = true;
                 }
             }
         }

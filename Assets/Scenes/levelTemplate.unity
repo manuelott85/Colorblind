@@ -427,6 +427,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114776604281178396, guid: cda8cb3173c66894d8bd48ec56dcf8ba,
+        type: 2}
+      propertyPath: layoutArray.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4735734312831622, guid: cda8cb3173c66894d8bd48ec56dcf8ba, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -482,7 +487,7 @@ Prefab:
     - target: {fileID: 114776604281178396, guid: cda8cb3173c66894d8bd48ec56dcf8ba,
         type: 2}
       propertyPath: onlyOneController
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114776604281178396, guid: cda8cb3173c66894d8bd48ec56dcf8ba,
         type: 2}
@@ -501,7 +506,24 @@ Prefab:
     - target: {fileID: 114776604281178396, guid: cda8cb3173c66894d8bd48ec56dcf8ba,
         type: 2}
       propertyPath: debugShowConnectedCtrlByName
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114776604281178396, guid: cda8cb3173c66894d8bd48ec56dcf8ba,
+        type: 2}
+      propertyPath: layoutArray.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4e2c311e10457014b9dffa636462d129,
+        type: 2}
+    - target: {fileID: 114776604281178396, guid: cda8cb3173c66894d8bd48ec56dcf8ba,
+        type: 2}
+      propertyPath: layoutArray.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 0b47a9682ef8b334b900775db6da4efc,
+        type: 2}
+    - target: {fileID: 114776604281178396, guid: cda8cb3173c66894d8bd48ec56dcf8ba,
+        type: 2}
+      propertyPath: skipHardcodedCtrlProfiles
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cda8cb3173c66894d8bd48ec56dcf8ba, type: 2}
