@@ -49,6 +49,7 @@ public class calibration : MonoBehaviour {
 
     private bool isCalibrationActive = true;   // will skip the whole calibration system if set to false
     public bool getIsCalibrationActive() { return isCalibrationActive; }    // make the variable readable from everywhere
+    public void deactivateCalibration() { isCalibrationActive = false; }
     private bool hasToRecenter = false; // will be set to true, when the player moves an axis out of the deadzone; the calibration process pauses until the player moves the stick back into the deadzone
     private bool hasToReleaseBtn = false; // same as hasToRecenter but for Buttons
     private string joyPrefix = "Joystick";

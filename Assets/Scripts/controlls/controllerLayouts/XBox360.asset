@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f754dcb95be222438f2348cb901542f, type: 3}
+  m_Name: XBox360
+  m_EditorClassIdentifier: 
+  controllerName: Controller (XBOX 360 For Windows)
+  P1DPad_H: Joystick1Axis2
+  P1DPad_V: Joystick1Axis1
+  P1Btn_A: Joystick1Button0
+  P1Btn_B: Joystick1Button1
+  P2DPad_H: Joystick1Axis5
+  P2DPad_V: Joystick1Axis4
+  P2Btn_A: Joystick1Button2
+  P2Btn_B: Joystick1Button3

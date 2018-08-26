@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour {
     // singleton class
     public static GameManager instance;
 
+    [Header("Color calibration")]
     public float green_saturation = 1;
     public float green_hueShift = 0;
     public float green_value = 1;
@@ -17,9 +18,12 @@ public class GameManager : MonoBehaviour {
     public float red_value = 1;
     public float grey_value = 1;
 
+    [Header("References")]
     public Canvas titleScreen;
-
-    public Transform playerA, playerB, ColorCalibration, lastActiveCheckpoint;
+    public Transform playerA;
+    public Transform playerB;
+    public Transform ColorCalibration;
+    public Transform lastActiveCheckpoint;
 
     private bool playerA_isAlive = true;
     private bool playerA_hasInformed = false;
@@ -111,9 +115,9 @@ public class GameManager : MonoBehaviour {
 
     private string[] inputsToLookFor = new string[] { "P1DPad_H", "P1DPad_V", "P1Btn_A", "P1Btn_B", "P2DPad_H", "P2DPad_V", "P2Btn_A", "P2Btn_B" };
     //private string[] inputsToLookFor = new string[] { "P1DPad_H" };
-    private string[] inputsToLookForDavidQuickFix = new string[] { "P1DPad_H", "P1DPad_V", "P1Btn_A", "P1Btn_B"};
+    //private string[] inputsToLookForDavidQuickFix = new string[] { "P1DPad_H", "P1DPad_V", "P1Btn_A", "P1Btn_B"};
 
-    // Gamepad mapping
+    [Header("Gamepad mapping")]
     //public string LS_H = "";
     //    public string LS_H_Text = "Move the LEFT Thumbstick UP";
     ////private bool invertLS_H = false;
@@ -155,8 +159,16 @@ public class GameManager : MonoBehaviour {
     //public string Btn_RB = "";
     //    public string Btn_RB_Text = "Push RIGHT Bumper";
 
-    [Tooltip("If true: skip the DPad for the calibration system")]
-    public bool onlyOneController = false;
+    [Header ("Debug")]
+    [SerializeField]
+    [Tooltip("If true: calibrate both player to one controller")]
+    private bool onlyOneController = false;
+    [SerializeField]
+    [Tooltip("If true: the calibration system will not use the hardcoded controller profiles")]
+    private bool skipHardcodedCtrlProfiles = false;
+    [SerializeField]
+    [Tooltip("Print all connected controller names into the debug console")]
+    private bool debugShowConnectedCtrlByName = false;
 
     // Getter and Setter for Input
     public string[] getInputsToLookFor() { return inputsToLookFor; }
@@ -188,10 +200,10 @@ public class GameManager : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        // QuickFix for David's Controller
-        if (onlyOneController)
-            inputsToLookFor = inputsToLookForDavidQuickFix;
-        LoadInput();
+        //// QuickFix for David's Controller
+        //if (onlyOneController)
+        //    inputsToLookFor = inputsToLookForDavidQuickFix;
+        check4HardcodedProfil();
         updateColors();
        // if (showTitleScreen)
             titleScreen.enabled = true;
@@ -245,10 +257,111 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
+    void check4HardcodedProfil()
+    {
+        // Print all connected controller names into the debug console
+        if (debugShowConnectedCtrlByName)
+        {
+            string[] temp = Input.GetJoystickNames();
+            foreach (string element in temp)
+                Debug.Log(element);
+        }
+
+        // if there is something wrong with the controller layout; skip the profiles
+        if (skipHardcodedCtrlProfiles)
+        {
+            LoadInput(false);   // start the regular calibration process
+            return; // skip everything beneath
+        }
+
+        bool playerAIsSet = false;
+        bool playerBIsSet = false;
+
+        // Check each connected controller if it is a "known" product, if it is: use static values
+        // if both players have a valid controller connected, skip manual calibration process
+        for (int i = 0; i < Input.GetJoystickNames().Length; i++)
+        {
+            // "Controller (Xbox One For Windows)"
+            if (Input.GetJoystickNames()[i] == "Controller (Xbox One For Windows)")
+            {
+                // Check for PlayerA
+                if (i == 0 && !playerAIsSet)
+                {
+                    P1DPad_H = "Joystick1Axis2";
+                    P1DPad_V = "Joystick1Axis1";
+                    P1Btn_A = "Joystick1Button0";
+                    P1Btn_B = "Joystick1Button1";
+                    playerAIsSet = true;
+
+                    // if there is only on controller connected and debugging is activated
+                    if (Input.GetJoystickNames().Length == 1 && onlyOneController)
+                    {
+                        P2DPad_H = "Joystick1Axis5";
+                        P2DPad_V = "Joystick1Axis4";
+                        P2Btn_A = "Joystick1Button2";
+                        P2Btn_B = "Joystick1Button3";
+                        playerBIsSet = true;
+                    }
+                }
+                // Check for PlayerB
+                if (i == 1 && !playerBIsSet)
+                {
+                    P2DPad_H = "Joystick2Axis2";
+                    P2DPad_V = "Joystick2Axis1";
+                    P2Btn_A = "Joystick2Button0";
+                    P2Btn_B = "Joystick2Button1";
+                    playerBIsSet = true;
+                }
+            }
+
+            // "Controller (Xbox One For Windows)"
+            if (Input.GetJoystickNames()[i] == "Controller (XBOX 360 For Windows)")
+            {
+                // Check for PlayerA
+                if (i == 0 && !playerAIsSet)
+                {
+                    P1DPad_H = "Joystick1Axis2";
+                    P1DPad_V = "Joystick1Axis1";
+                    P1Btn_A = "Joystick1Button0";
+                    P1Btn_B = "Joystick1Button1";
+                    playerAIsSet = true;
+
+                    // if there is only on controller connected and debugging is activated
+                    if (Input.GetJoystickNames().Length == 1 && onlyOneController)
+                    {
+                        P2DPad_H = "Joystick1Axis5";
+                        P2DPad_V = "Joystick1Axis4";
+                        P2Btn_A = "Joystick1Button2";
+                        P2Btn_B = "Joystick1Button3";
+                        playerBIsSet = true;
+                    }
+                }
+                // Check for PlayerB
+                if (i == 1 && !playerBIsSet)
+                {
+                    P2DPad_H = "Joystick2Axis2";
+                    P2DPad_V = "Joystick2Axis1";
+                    P2Btn_A = "Joystick2Button0";
+                    P2Btn_B = "Joystick2Button1";
+                    playerBIsSet = true;
+                }
+            }
+        }
+
+        if (playerAIsSet && playerBIsSet)
+        {
+            calibration.instance.deactivateCalibration();
+            updateControlls();
+            LoadInput(true);
+        }
+        else
+            LoadInput(false);
+    }
+
     /// <summary>
     /// Read the InputData from the PlayerPrefs and set everything up accordingly
     /// </summary>
-    void LoadInput()
+    void LoadInput(bool skipCalibration = false)
     {
         foreach(string element in inputsToLookFor)
         {
@@ -264,7 +377,8 @@ public class GameManager : MonoBehaviour {
                     invert = true;
                 else
                     invert = false;
-                setInput(element, inputData[0], invert, false);
+                if (!skipCalibration)
+                    setInput(element, inputData[0], invert, false);
 
                 isSet = true;
             }
@@ -313,7 +427,8 @@ public class GameManager : MonoBehaviour {
             GetComponent<calibration>().addInputForCalibration(element, isSet, textToShow, isAButton);
 
         }
-        GetComponent<calibration>().resetCalibration(false);
+        if (!skipCalibration)
+            GetComponent<calibration>().resetCalibration(false);
     }
 
     /// <summary>

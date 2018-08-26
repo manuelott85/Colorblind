@@ -498,6 +498,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114776604281178396, guid: cda8cb3173c66894d8bd48ec56dcf8ba,
+        type: 2}
+      propertyPath: debugShowConnectedCtrlByName
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cda8cb3173c66894d8bd48ec56dcf8ba, type: 2}
   m_IsPrefabParent: 0
