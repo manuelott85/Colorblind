@@ -13,13 +13,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114667070307456478}
-  - {fileID: 114191465925088376}
-  - {fileID: 114261179592732346}
+  - {fileID: 114336047096565124}
+  - {fileID: 114433198376895120}
   EditorEvents:
   - {fileID: 114933827388273172}
-  MasterBankRef: {fileID: 114261179592732346}
+  MasterBankRef: {fileID: 114433198376895120}
   StringsBankRef: {fileID: 114667070307456478}
-  stringsBankWriteTime: 636609460865450895
+  stringsBankWriteTime: 636600379611404043
   cacheVersion: 2
 --- !u!114 &114191465925088376
 MonoBehaviour:
@@ -53,6 +53,43 @@ MonoBehaviour:
   Path: C:\Users\asus\Desktop\ColourBlind\ColorblindNew\FMODAssets\ColorBlindFmod\Build\Desktop\Master
     Bank.bank
   lastModified: 636609460865425820
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 12474
+  Exists: 1
+--- !u!114 &114336047096565124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Development\UnityProjects\Colorblind\FMODAssets\ColorBlindFmod\Build\Desktop\Test.bank
+  lastModified: 636600379611714335
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 3503488
+  Exists: 1
+--- !u!114 &114433198376895120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: D:\Development\UnityProjects\Colorblind\FMODAssets\ColorBlindFmod\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636600379611394029
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -107,7 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMODAssets\ColorBlindFmod\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636609460865450895
+  lastModified: 636600379611404043
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -146,7 +183,7 @@ MonoBehaviour:
   Path: event:/ScoreLevel1
   guid: 8ae3e20ebdddbb4695aaa3d99b94c0c3
   Banks:
-  - {fileID: 114191465925088376}
+  - {fileID: 114336047096565124}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1

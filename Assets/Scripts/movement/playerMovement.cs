@@ -53,7 +53,7 @@ public class playerMovement : MonoBehaviour
     void Update()
     {
         // In case the calibration is not finished, stop here because there are no axes asigned
-        if (forceValueRL == "" || forceButtonA == "")
+        if (/*forceValueRL == "" || forceButtonA == "" || */calibration.instance.getIsCalibrationActive())
             return;
 
         rBodyRef = GetComponent<Rigidbody2D>();   // get a reference to the rigidbody

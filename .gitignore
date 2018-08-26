@@ -35,3 +35,7 @@ sysinfo.txt
 *.unitypackage
 *.app
 *.exe
+
+# FMOD
+fmod_editor.log
+fmod.log

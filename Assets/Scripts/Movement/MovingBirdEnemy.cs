@@ -13,8 +13,6 @@ public class MovingBirdEnemy : MonoBehaviour
 
     public float moveValue = 10;
     private bool moveRight = true;
-
-    private bool moveUp = true;
    
     public float maXMovementSpan = 50;
     private float currentXMovementSpan = 0;

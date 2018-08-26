@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class finishZone : MonoBehaviour {
 
@@ -26,7 +27,7 @@ public class finishZone : MonoBehaviour {
         if (collision.gameObject.name == "PlayerA" || collision.gameObject.name == "PlayerB")
         {
             if(winScreenLevel != null)
-                Application.LoadLevel(winScreenLevel);
+                SceneManager.LoadScene(winScreenLevel);
         }
     }
 }

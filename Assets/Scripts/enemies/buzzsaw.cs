@@ -15,7 +15,7 @@ public class buzzsaw : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
-        Transform[] waypointArrayCopyTemp = new Transform[waypointArray.Length + 1];
+        //Transform[] waypointArrayCopyTemp = new Transform[waypointArray.Length + 1];
         Transform waypointInst = Instantiate(waypointArray[0]);
         waypointInst.transform.position = transform.position;
         waypointInst.transform.parent = transform.parent;
