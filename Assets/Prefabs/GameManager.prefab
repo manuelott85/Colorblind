@@ -207,7 +207,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1226938572041822}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b7a9a244bf2ff0341809c69946494bfd, type: 3}
@@ -624,6 +624,10 @@ MonoBehaviour:
   playerB: {fileID: 0}
   ColorCalibration: {fileID: 0}
   lastActiveCheckpoint: {fileID: 0}
+  layoutArray:
+  - {fileID: 11400000, guid: 4e2c311e10457014b9dffa636462d129, type: 2}
+  - {fileID: 11400000, guid: 0b47a9682ef8b334b900775db6da4efc, type: 2}
+  - {fileID: 11400000, guid: eced8b5301b61214886860f2a0f46e27, type: 2}
   P1DPad_H: 
   P1DPad_H_Text: 'Player 1: Move the DPad UPWARDS'
   P1DPad_V: 
@@ -640,7 +644,9 @@ MonoBehaviour:
   P2Btn_A_Text: 'Player 2: Push Button A (XBOX) or CROSS (PS)'
   P2Btn_B: 
   P2Btn_B_Text: 'Player 2: Push Button B (XBOX) or CIRCLE (PS)'
-  onlyOneController: 0
+  onlyOneController: 1
+  skipHardcodedCtrlProfiles: 0
+  debugShowConnectedCtrlByName: 0
 --- !u!114 &114823375655126978
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -821,7 +827,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1104986715463106}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 100, y: -93, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224303528662694730}
@@ -897,7 +903,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1442455398141800}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 232.66, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224438835369593098}
@@ -915,7 +921,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1816997443580248}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10.189654}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.016850974, y: 0.016850974, z: 0.016850974}
   m_Children:
   - {fileID: 224344055038629774}
@@ -935,7 +941,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1753129420119546}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.0038909912, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.99766123, y: 0.99766123, z: 0.99766123}
   m_Children: []
   m_Father: {fileID: 224438835369593098}
@@ -953,7 +959,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1471780365007068}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -273, y: -106, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224151689497865714}
