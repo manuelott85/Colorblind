@@ -498,13 +498,13 @@ public class GameManager : MonoBehaviour {
     public void updateControlls()
     {
         // Player A
-        playerA.GetComponent<playerMovement>().setForceValueRL(P1DPad_V);
+        playerA.GetComponent<playerMovementNew>().setForceValueRL(P1DPad_V);
         //playerA.GetComponent<playerMovement>().forceValueUD = P1DPad_H;
-        playerA.GetComponent<playerMovement>().setForceButtonA(P1Btn_A);
+        playerA.GetComponent<playerMovementNew>().setForceButtonA(P1Btn_A);
 
-        // Player B
+        //// Player B
         playerB.GetComponent<playerMovement>().setForceValueRL(P2DPad_V);
-        //playerB.GetComponent<playerMovement>().forceValueUD = P2DPad_H;
+        ////playerB.GetComponent<playerMovement>().forceValueUD = P2DPad_H;
         playerB.GetComponent<playerMovement>().setForceButtonA(P2Btn_A);
     }
 
