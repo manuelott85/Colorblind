@@ -503,9 +503,9 @@ public class GameManager : MonoBehaviour {
         playerA.GetComponent<playerMovementNew>().setForceButtonA(P1Btn_A);
 
         //// Player B
-        playerB.GetComponent<playerMovement>().setForceValueRL(P2DPad_V);
+        playerB.GetComponent<playerMovementNew>().setForceValueRL(P2DPad_V);
         ////playerB.GetComponent<playerMovement>().forceValueUD = P2DPad_H;
-        playerB.GetComponent<playerMovement>().setForceButtonA(P2Btn_A);
+        playerB.GetComponent<playerMovementNew>().setForceButtonA(P2Btn_A);
     }
 
     public void updateColors()

@@ -7,17 +7,17 @@ public class moveWithPlatform : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision.gameObject);
-        if(collision.gameObject == GameManager.instance.playerA.gameObject || collision.gameObject == GameManager.instance.playerB.gameObject)
+        if(collision.transform.parent.gameObject == GameManager.instance.playerA.gameObject || collision.transform.parent.gameObject == GameManager.instance.playerB.gameObject)
         {
-            collision.transform.SetParent(transform);
+            collision.transform.parent.transform.SetParent(transform);
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject == GameManager.instance.playerA.gameObject || collision.gameObject == GameManager.instance.playerB.gameObject)
+        if (collision.transform.parent.gameObject == GameManager.instance.playerA.gameObject || collision.transform.parent.gameObject == GameManager.instance.playerB.gameObject)
         {
-            collision.transform.SetParent(null);
+            collision.transform.parent.transform.SetParent(null);
         }
     }
 }

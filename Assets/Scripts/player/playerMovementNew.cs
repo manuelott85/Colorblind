@@ -4,8 +4,8 @@ public class playerMovementNew : MonoBehaviour {
 
     [SerializeField] [Tooltip("The amount of speed that is applied by pushing the stick to either side at its maximum")]
     private float moveForce = 40f;
-    [SerializeField] [Tooltip("Amount of force added when the player jumps")]
-    private float m_JumpForce = 400f;
+    //[SerializeField] [Tooltip("Amount of force added when the player jumps")]
+    //private float m_JumpForce = 400f;
     [SerializeField] [Range(0, .3f)] [Tooltip("How much to smooth out the movement")]
     private float m_MovementSmoothing = .05f;
     [SerializeField] [Tooltip("Whether or not a player can steer while jumping")]
@@ -14,6 +14,12 @@ public class playerMovementNew : MonoBehaviour {
     private LayerMask m_WhatIsGround;
     [SerializeField] [Tooltip("A position marking where to check if the player is grounded")]
     private Transform m_GroundCheck;
+    [SerializeField] [Tooltip("The force that is applied as one big push in that moment the player PUSHES the jump button")]
+    private float jumpForceImpulse = 50f;
+    [SerializeField] [Tooltip("This is the amount of force that is applied to the jump while HOLDING the jump button; this value is a multiplicator for the jumpForceImpulse value")]
+    private float jumpForceAdditional = 2f;
+    [SerializeField] [Tooltip("While in this timespan (in sec), the player can hold down the jump button to reach higher levels")]
+    private float time4MaxjumpForceInSec = 0.5f;
 
     //Inputs, both are set by the calibration system and spread out by the gameManager
     private string forceValueRL; //The name of the axis for left and right movement
@@ -22,7 +28,8 @@ public class playerMovementNew : MonoBehaviour {
     public void setForceButtonA(string name) { forceButtonA = name; } // Tell the movingPlayer script the name of the button to jump
 
     private float horizontalMove = 0f;
-    private bool jump = false;
+    private bool inJumpProcess = false;
+    private bool wishToJump = false;
 
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     private bool m_Grounded;            // Whether or not the player is grounded.
@@ -30,6 +37,9 @@ public class playerMovementNew : MonoBehaviour {
     private Rigidbody2D m_Rigidbody2D;
     private bool m_FacingRight = true;  // For determining which way the player is currently facing.
     private Vector3 m_Velocity = Vector3.zero;
+
+    private Vector2 movementVector = Vector2.zero;
+    private float timeStempJumpStart = 0;
 
     private void Awake()
     {
@@ -44,11 +54,18 @@ public class playerMovementNew : MonoBehaviour {
 
         // Get the players' input data
         horizontalMove = Input.GetAxisRaw(forceValueRL) * moveForce;
-        if(Input.GetButtonDown(forceButtonA))
+
+        // Initiate the jump sequence
+        if (Input.GetButtonDown(forceButtonA))
+            wishToJump = true;
+
+        // Dissalow the player to influence the current jump sequence anymore if he release the jumpbutton once
+        if (Input.GetButtonUp(forceButtonA))
         {
-            jump = true;
+            wishToJump = false;
+            inJumpProcess = false;
         }
-	}
+    }
 
     private void FixedUpdate()
     {
@@ -64,12 +81,10 @@ public class playerMovementNew : MonoBehaviour {
             }
         }
 
-        // Execute Movement
-        move(horizontalMove * Time.fixedDeltaTime, jump);   // Move the character
-        jump = false;   // reset jump
+        move(horizontalMove * Time.fixedDeltaTime, wishToJump);   // Move the character
     }
 
-    public void move(float move, bool jump)
+    public void move(float move, bool wishToJump)
     {
         //only control the player if grounded or airControl is turned on
         if (m_Grounded || m_AirControl)
@@ -88,11 +103,32 @@ public class playerMovementNew : MonoBehaviour {
         }
 
         // If the player should jump...
-        if (m_Grounded && jump)
+        if (m_Grounded && wishToJump && !inJumpProcess)
         {
             // Add a vertical force to the player.
+            // If the character is not jumping, initiate the jump sequence
             m_Grounded = false;
-            m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+            //m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
+
+            inJumpProcess = true;
+            timeStempJumpStart = Time.realtimeSinceStartup;
+
+            movementVector = new Vector2(0, 1f);
+            movementVector *= jumpForceImpulse;
+            m_Rigidbody2D.AddForce(movementVector, ForceMode2D.Impulse);
+        }
+
+        //if (rBodyRef.velocity.y < minVelocity && rBodyRef.velocity.y > -minVelocity && !isColliding)  // this line prevents the player to jump midair
+        //{
+            
+        //}
+
+
+        // only proceed if the player was still holding the jumpbutton and is in air
+        if (inJumpProcess && timeStempJumpStart + time4MaxjumpForceInSec > Time.realtimeSinceStartup)
+        {
+            Vector2 movementVectorAdditional = movementVector * jumpForceAdditional;
+            gameObject.GetComponent<Rigidbody2D>().AddForce(movementVectorAdditional);
         }
     }
 

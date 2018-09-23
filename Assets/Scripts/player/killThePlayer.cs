@@ -30,9 +30,9 @@ public class killThePlayer : MonoBehaviour {
     {
         // Check if Player One or Two enters the area and tell the game manager that this player
         // is dead now. By telling the game manager, the players' dieing system script will be executed
-        if (collision.gameObject.name == "PlayerA")
+        if (collision.transform.parent.gameObject == GameManager.instance.playerA.gameObject)
             GameManager.instance.killPlayer(true);
-        if (collision.gameObject.name == "PlayerB")
+        if (collision.transform.parent.gameObject == GameManager.instance.playerB.gameObject)
             GameManager.instance.killPlayer(false);
 
         // Play some specific sound file to let the player notice, he is dead

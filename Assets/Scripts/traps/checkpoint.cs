@@ -35,7 +35,9 @@ public class checkpoint : MonoBehaviour {
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // In case a player enters the trigger zone and it hasn't been activated: activate it
-        if ((collision.gameObject.name == "PlayerA" || collision.gameObject.name == "PlayerB") && !isActive)
+        if ((collision.transform.parent.gameObject == GameManager.instance.playerA.gameObject ||
+             collision.transform.parent.gameObject == GameManager.instance.playerB.gameObject)
+             && !isActive)
         {
             isActive = true;    // Set the checkpoint to active
             GameManager.instance.lastActiveCheckpoint = transform;  // register self as the last activated checkpoint (the one that should be used from now on)
@@ -54,7 +56,7 @@ public class checkpoint : MonoBehaviour {
     private void OnTriggerStay2D(Collider2D collision)
     {
         // Execute when player A is in the zone and alive
-        if (collision.gameObject.name == "PlayerA" && GameManager.instance.getIsAlive(true))
+        if (collision.transform.parent.gameObject == GameManager.instance.playerA.gameObject && GameManager.instance.getIsAlive(true))
         {
             // Execute when player B is dead
             if(!GameManager.instance.getIsAlive(false))
@@ -69,7 +71,7 @@ public class checkpoint : MonoBehaviour {
         }
 
         // Execute when player B is in the zone and alive
-        if (collision.gameObject.name == "PlayerB" && GameManager.instance.getIsAlive(false))
+        if (collision.transform.parent.gameObject == GameManager.instance.playerB.gameObject && GameManager.instance.getIsAlive(false))
         {
             // Execute when player A is dead
             if (!GameManager.instance.getIsAlive(true))
