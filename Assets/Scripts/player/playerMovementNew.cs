@@ -108,7 +108,6 @@ public class playerMovementNew : MonoBehaviour {
             // Add a vertical force to the player.
             // If the character is not jumping, initiate the jump sequence
             m_Grounded = false;
-            //m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 
             inJumpProcess = true;
             timeStempJumpStart = Time.realtimeSinceStartup;
@@ -117,12 +116,6 @@ public class playerMovementNew : MonoBehaviour {
             movementVector *= jumpForceImpulse;
             m_Rigidbody2D.AddForce(movementVector, ForceMode2D.Impulse);
         }
-
-        //if (rBodyRef.velocity.y < minVelocity && rBodyRef.velocity.y > -minVelocity && !isColliding)  // this line prevents the player to jump midair
-        //{
-            
-        //}
-
 
         // only proceed if the player was still holding the jumpbutton and is in air
         if (inJumpProcess && timeStempJumpStart + time4MaxjumpForceInSec > Time.realtimeSinceStartup)
