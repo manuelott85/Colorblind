@@ -93,7 +93,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ClassDescription: This component loads a new scene when either player one or two
     enters the trigger zone
-  winScreenLevel: winScreen
+  nextLevel: 
 --- !u!212 &212651978085754478
 SpriteRenderer:
   m_ObjectHideFlags: 1

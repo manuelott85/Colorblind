@@ -9,8 +9,8 @@ public class finishZone : MonoBehaviour {
     [Tooltip("This is just a comment. This parameter is not used in game!")]
     public string ClassDescription = "This component loads a new scene when either player one or two enters the trigger zone";
 
-    [Tooltip("Name of the scene to load (need to match with the scene manager)")]
-    public string winScreenLevel = "";
+    [Tooltip("Name of the next scene to load (need to match with the scene manager)")]
+    public string nextLevel = "";
 
 	// Use this for initialization
 	void Start () {
@@ -24,10 +24,14 @@ public class finishZone : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "PlayerA" || collision.gameObject.name == "PlayerB")
+        if (collision.gameObject.name == "NewPlayerA" || collision.gameObject.name == "NewPlayerB")
         {
-            if(winScreenLevel != null)
-                SceneManager.LoadScene(winScreenLevel);
+            //Debug.Log("I hit the finish line collider");
+            if (nextLevel != null)
+            {
+                SceneManager.LoadScene(nextLevel);
+                //Debug.Log("I hit the finish line collider");
+            }
         }
     }
 }
