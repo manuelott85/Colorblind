@@ -18,6 +18,14 @@ public class GameManager : MonoBehaviour {
     public float red_value = 1;
     public float grey_value = 1;
 
+    public float def_green_saturation = 1;
+    public float def_green_hueShift = 0;
+    public float def_green_value = 1;
+    public float def_red_saturation = 1;
+    public float def_red_hueShift = 0;
+    public float def_red_value = 1;
+    public float def_grey_value = 1;
+
     [Header("References")]
     public Canvas titleScreen;
     public Transform playerA;

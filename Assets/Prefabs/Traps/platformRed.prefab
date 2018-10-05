@@ -173,9 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ClassDescription: This component will register the objects' material to the colorCalibration
     system. Only one option can be set to true! Only the first material is considered
-  isItGreen: 0
-  isItRed: 1
-  isItGrey: 0
+  colorSelected: 1
 --- !u!212 &212131806789893642
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -190,7 +188,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 350265910ca256242b6f86579c53e785, type: 2}
+  - {fileID: 2100000, guid: 20aeee5547736094f95809b299a13470, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -210,7 +208,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c20095df3ba6bd34ebd600f6ad43eef3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b57d2aaec22714a47a9c258a0aa82bd3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

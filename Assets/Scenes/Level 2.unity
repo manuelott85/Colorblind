@@ -1447,6 +1447,160 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1397485612}
+    - target: {fileID: 224042855617257202, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224042855617257202, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224371163028698594, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224371163028698594, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224371163028698594, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224423196221261336, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224423196221261336, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224945812155262796, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224945812155262796, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224945812155262796, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224785993959468658, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224785993959468658, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224292122562691512, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224292122562691512, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224292122562691512, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224021253924529532, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224021253924529532, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224459022680194090, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224459022680194090, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224459022680194090, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224131130096922058, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224131130096922058, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224810660499820556, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224810660499820556, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224810660499820556, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224010118894776290, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224010118894776290, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224272277700593962, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224272277700593962, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224272277700593962, guid: bf3f3551ea73c474a9a5e40cded85429,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1105322252485002, guid: bf3f3551ea73c474a9a5e40cded85429, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf3f3551ea73c474a9a5e40cded85429, type: 2}
   m_IsPrefabParent: 0
@@ -3752,9 +3906,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ClassDescription: This component will register the objects' material to the colorCalibration
     system. Only one option can be set to true!
-  isItGreen: 1
-  isItRed: 0
-  isItGrey: 0
+  colorSelected: 0
 --- !u!1001 &1645011773
 Prefab:
   m_ObjectHideFlags: 0
@@ -14913,9 +15065,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ClassDescription: This component will register the objects' material to the colorCalibration
     system. Only one option can be set to true!
-  isItGreen: 0
-  isItRed: 1
-  isItGrey: 0
+  colorSelected: 0
 --- !u!1001 &1733658500
 Prefab:
   m_ObjectHideFlags: 0

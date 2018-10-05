@@ -10,24 +10,19 @@ public class spiketrap : MonoBehaviour {
 
     public Material materialGreen, materialRed;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         if(greenVersion)
         {
             GetComponent<SpriteRenderer>().material = materialGreen;
+            GetComponent<updateColor>().colorSelected = selectColor.isGreen;
         }
         if (!greenVersion)
         {
             GetComponent<SpriteRenderer>().sprite = spriteRed;
             GetComponent<SpriteRenderer>().material = materialRed;
-            GetComponent<updateColor>().isItGreen = false;
-            GetComponent<updateColor>().isItRed = true;
+            GetComponent<updateColor>().colorSelected = selectColor.isRed;
         }
 
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
