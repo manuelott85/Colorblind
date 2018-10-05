@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 95106694668184652}
   - component: {fileID: 114236205811640062}
   - component: {fileID: 114039890894335818}
-  - component: {fileID: 114606281418823638}
   - component: {fileID: 61660641352712124}
   m_Layer: 0
   m_Name: Spikes Green
@@ -39,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1104449565445424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.38, y: -2.19, z: 0}
+  m_LocalPosition: {x: 5.774057, y: 2.8544378, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,7 +78,7 @@ Animator:
   m_GameObject: {fileID: 1104449565445424}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 35ade55ee46582f4ebd1c3d39abd7874, type: 2}
+  m_Controller: {fileID: 9100000, guid: 2e0903e34f3c1014c9a1ba467a0f0804, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -98,9 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d29141dec8925c7488b90bcd0006eea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isItGreen: 1
-  isItRed: 0
-  isItGrey: 0
+  ClassDescription: This component will register the objects' material to the colorCalibration
+    system. Only one option can be set to true! Only the first material is considered
+  colorSelected: 0
 --- !u!114 &114236205811640062
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -112,21 +111,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604f7b477cbbac24abeb594c9b68803b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114606281418823638
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1104449565445424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 778f2dab61755b444904145590dbdb84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  greenVersion: 1
-  spriteRed: {fileID: 21300000, guid: ce2c37da9ddcd024e9e58acb391d3a63, type: 3}
-  materialGreen: {fileID: 2100000, guid: 49c7ae1579991d4448b1e927863cc54c, type: 2}
-  materialRed: {fileID: 2100000, guid: 350265910ca256242b6f86579c53e785, type: 2}
+  ClassDescription: This component looks for an attached Trigger-Collider2D. If a
+    player enters this trigger zone, this component informs the game manager, that
+    this player should now be considered as 'dead'. The dieingSystem process everything
+    associated
+  soundSourceFile: {fileID: 0}
 --- !u!212 &212112481832370140
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -141,7 +130,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 256c0348d8b5dd647b5a029d0710b2a3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

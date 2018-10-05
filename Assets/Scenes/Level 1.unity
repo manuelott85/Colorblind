@@ -323,7 +323,7 @@ TilemapRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8660c28050a79f74495c97c1d7cfcd0c, type: 2}
+  - {fileID: 2100000, guid: 49c7ae1579991d4448b1e927863cc54c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

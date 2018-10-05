@@ -88,8 +88,8 @@ Transform:
   m_LocalPosition: {x: -10.682025, y: 0.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4999527906751194}
   - {fileID: 4950700476629728}
+  - {fileID: 4999527906751194}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -118,7 +118,7 @@ Transform:
   m_Children:
   - {fileID: 4803994323376484}
   m_Father: {fileID: 4235816774164488}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4999527906751194
 Transform:
@@ -127,11 +127,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1866327710526156}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.64, y: 0, z: 0}
+  m_LocalPosition: {x: 3.98, y: -0.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4235816774164488}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!58 &58596795065306096
 CircleCollider2D:
@@ -161,9 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ClassDescription: This component will register the objects' material to the colorCalibration
     system. Only one option can be set to true! Only the first material is considered
-  isItGreen: 1
-  isItRed: 0
-  isItGrey: 0
+  colorSelected: 0
 --- !u!114 &114137764275069166
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -266,7 +264,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 49c7ae1579991d4448b1e927863cc54c, type: 2}
+  - {fileID: 2100000, guid: 256c0348d8b5dd647b5a029d0710b2a3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -286,7 +284,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 18f88f9896a00254699732689350d33a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fba9debc6febea04b87d00e39a54963b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

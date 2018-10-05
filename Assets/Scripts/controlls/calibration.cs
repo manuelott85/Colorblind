@@ -66,6 +66,7 @@ public class calibration : MonoBehaviour {
     void Awake()
     {
         instance = this;
+        gmInputs = new List<GameManagerInput>();    // create an empty GM input list
     }
 
     // Use this for initialization
@@ -73,7 +74,6 @@ public class calibration : MonoBehaviour {
     {
         singleInputs = new List<string>();  // create an empty list for all possible axes
         singleInputButtons = new List<string>();    // create an empty List for all possible Buttons
-        gmInputs = new List<GameManagerInput>();    // create an empty GM input list
 
         // Create List of all possible Axes with its input manager name
         for (int i = 1; i < (amountAxes + 1); i++)
