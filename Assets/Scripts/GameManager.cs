@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; // Required when Using UI elements.
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour {
 
@@ -31,6 +32,7 @@ public class GameManager : MonoBehaviour {
     public Transform playerA;
     public Transform playerB;
     public Transform ColorCalibration;
+    public GameObject eventSystem;
     public Transform lastActiveCheckpoint;
     [Space(5)]
     [SerializeField]
@@ -509,6 +511,13 @@ public class GameManager : MonoBehaviour {
         playerA.GetComponent<playerMovementNew>().setForceValueRL(P1DPad_V);
         //playerA.GetComponent<playerMovement>().forceValueUD = P1DPad_H;
         playerA.GetComponent<playerMovementNew>().setForceButtonA(P1Btn_A);
+        if (eventSystem)
+        {
+            eventSystem.GetComponent<StandaloneInputModule>().horizontalAxis = P1DPad_V;
+            eventSystem.GetComponent<StandaloneInputModule>().verticalAxis = P1DPad_H;
+            eventSystem.GetComponent<StandaloneInputModule>().submitButton = P1Btn_A;
+            eventSystem.GetComponent<StandaloneInputModule>().cancelButton = P1Btn_B;
+        }
 
         //// Player B
         playerB.GetComponent<playerMovementNew>().setForceValueRL(P2DPad_V);
