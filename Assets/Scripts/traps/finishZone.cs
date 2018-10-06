@@ -24,7 +24,7 @@ public class finishZone : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "NewPlayerA" || collision.gameObject.name == "NewPlayerB")
+        if (collision.transform.parent.gameObject.name == "NewPlayerA" || collision.transform.parent.gameObject.name == "NewPlayerB")
         {
             //Debug.Log("I hit the finish line collider");
             if (nextLevel != null)
