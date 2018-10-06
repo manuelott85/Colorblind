@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4244123417927480}
   m_Layer: 0
-  m_Name: Buzzsaw Red
+  m_Name: BuzzSaw Red
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

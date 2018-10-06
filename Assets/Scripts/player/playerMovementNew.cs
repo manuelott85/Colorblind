@@ -13,7 +13,9 @@ public class playerMovementNew : MonoBehaviour {
     [SerializeField] [Tooltip("A mask determining what is ground to the character")]
     private LayerMask m_WhatIsGround;
     [SerializeField] [Tooltip("A position marking where to check if the player is grounded")]
-    private Transform m_GroundCheck;
+    private Transform m_GroundCheck1;
+    [SerializeField] [Tooltip("A position marking where to check if the player is grounded")]
+    private Transform m_GroundCheck2;
     [SerializeField] [Tooltip("The force that is applied as one big push in that moment the player PUSHES the jump button")]
     private float jumpForceImpulse = 50f;
     [SerializeField] [Tooltip("This is the amount of force that is applied to the jump while HOLDING the jump button; this value is a multiplicator for the jumpForceImpulse value")]
@@ -72,7 +74,8 @@ public class playerMovementNew : MonoBehaviour {
         // The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
         // This can be done using layers instead but Sample Assets will not overwrite your project settings.
         m_Grounded = false;
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
+        //Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
+        Collider2D[] colliders = Physics2D.OverlapAreaAll(m_GroundCheck1.position, m_GroundCheck2.position, m_WhatIsGround, -5f, 5f);
         for (int i = 0; i < colliders.Length; i++)
         {
             if (colliders[i].gameObject != gameObject)
