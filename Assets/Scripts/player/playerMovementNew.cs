@@ -51,7 +51,7 @@ public class playerMovementNew : MonoBehaviour {
     void Update ()
     {
         // In case the calibration is not finished, stop here because there are no axes asigned
-        if (calibration.instance.getIsCalibrationActive())
+        if (calibration.instance.getIsCalibrationActive() || GameManager.instance.ColorCalibration.gameObject.activeInHierarchy)
             return;
 
         // Get the players' input data
