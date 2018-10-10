@@ -44,9 +44,14 @@ public class checkpoint : MonoBehaviour {
             GetComponent<SpriteRenderer>().sprite = activeVersion;  // change the visual representation to the active sprite
 
             // play the sound clip if possible
-            if (soundS != null && activeSound != null)
-                soundS.playAudio(activeSound, 0, transform.position, false);
+            playReviveSound();
         }
+    }
+
+    public void playReviveSound()
+    {
+        if (soundS != null && activeSound != null)
+            soundS.playAudio(activeSound, 0, transform.position, false);
     }
 
     /// <summary>

@@ -256,8 +256,22 @@ public class GameManager : MonoBehaviour {
                 ColorCalibration.gameObject.SetActive(true);
         }
 
-        if(!playerA_isAlive && !playerB_isAlive)
-            Restart();
+        // revive at last checkpoint
+        if (!playerA_isAlive && !playerB_isAlive)
+        {
+            if (lastActiveCheckpoint == null)
+                Restart();    // old version
+            else
+            {
+                playerA.transform.position = lastActiveCheckpoint.position; // move the character model of player B to this checkpoint
+                revivePlayer(true); // Tell the game manager to revive player B
+                playerB.transform.position = lastActiveCheckpoint.position; // move the character model of player B to this checkpoint
+                revivePlayer(false); // Tell the game manager to revive player B
+
+                // play revive sound
+                lastActiveCheckpoint.GetComponent<checkpoint>().playReviveSound();
+            }
+        }
     }
 
     void Awake()
