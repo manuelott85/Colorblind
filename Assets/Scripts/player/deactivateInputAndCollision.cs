@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class deactivateInputAndCollision : MonoBehaviour {
+public class deactivateInputAndCollision : MonoBehaviour
+{
     [TextArea(0, 20)]
     [Tooltip("This is just a comment. This parameter is not used in game!")]
     public string ClassDescription = "If stepping into this trigger 2D, this script will disable the plays's input. Optionally, it can disable the collision with the camera boundaries";
