@@ -71,6 +71,8 @@ public class GameManager : MonoBehaviour {
             playerA_isAlive = true;
             playerA_hasInformed = false;
             playerA.transform.gameObject.SetActive(true);
+            playerA.GetComponent<playerMovementNew>().bDeactivateControlls = false;
+            playerA.Find("collider").transform.gameObject.layer = 8;
         }
         else
         {
@@ -79,6 +81,8 @@ public class GameManager : MonoBehaviour {
             playerB_isAlive = true;
             playerB_hasInformed = false;
             playerB.transform.gameObject.SetActive(true);
+            playerB.GetComponent<playerMovementNew>().bDeactivateControlls = false;
+            playerA.Find("collider").transform.gameObject.layer = 8;
         }
     }
 

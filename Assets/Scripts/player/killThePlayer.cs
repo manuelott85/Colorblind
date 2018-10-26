@@ -16,11 +16,6 @@ public class killThePlayer : MonoBehaviour {
     void Start () {
         soundS = GetComponent<SoundSource>();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     /// <summary>
     /// If a player enters the area, kill him
