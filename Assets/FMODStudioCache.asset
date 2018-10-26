@@ -13,13 +13,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114667070307456478}
-  - {fileID: 114243302990737234}
-  - {fileID: 114666483326149922}
+  - {fileID: 114596124679373102}
+  - {fileID: 114886043674853778}
   EditorEvents:
   - {fileID: 114933827388273172}
-  MasterBankRef: {fileID: 114666483326149922}
+  MasterBankRef: {fileID: 114886043674853778}
   StringsBankRef: {fileID: 114667070307456478}
-  stringsBankWriteTime: 636600379611404043
+  stringsBankWriteTime: 636723523607883440
   cacheVersion: 2
 --- !u!114 &114073676583630526
 MonoBehaviour:
@@ -243,6 +243,24 @@ MonoBehaviour:
   - Name: Desktop
     Value: 12474
   Exists: 0
+--- !u!114 &114596124679373102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\asus\Desktop\Colorblind\FMODAssets\ColorBlindFmod\Build\Desktop\Test.bank
+  lastModified: 636723523608172880
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 3503488
+  Exists: 1
 --- !u!114 &114666483326149922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMODAssets\ColorBlindFmod\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636600379611404043
+  lastModified: 636723523607883440
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -373,6 +391,25 @@ MonoBehaviour:
   - Name: Desktop
     Value: 3503488
   Exists: 1
+--- !u!114 &114886043674853778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\asus\Desktop\Colorblind\FMODAssets\ColorBlindFmod\Build\Desktop\Master
+    Bank.bank
+  lastModified: 636723523607863528
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 12474
+  Exists: 1
 --- !u!114 &114911490536496028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,7 +442,7 @@ MonoBehaviour:
   Path: event:/ScoreLevel1
   guid: 8ae3e20ebdddbb4695aaa3d99b94c0c3
   Banks:
-  - {fileID: 114243302990737234}
+  - {fileID: 114596124679373102}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
