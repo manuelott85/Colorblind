@@ -2398,7 +2398,7 @@ TilemapRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 49c7ae1579991d4448b1e927863cc54c, type: 2}
+  - {fileID: 2100000, guid: 34615059679ecfe46836725d84571e2e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -12324,7 +12324,7 @@ TilemapRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 350265910ca256242b6f86579c53e785, type: 2}
+  - {fileID: 2100000, guid: 20aeee5547736094f95809b299a13470, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13905,7 +13905,7 @@ TilemapRenderer:
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
-  - {fileID: 2100000, guid: 350265910ca256242b6f86579c53e785, type: 2}
+  - {fileID: 2100000, guid: 256c0348d8b5dd647b5a029d0710b2a3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
