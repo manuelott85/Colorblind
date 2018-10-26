@@ -32,6 +32,7 @@ public class playerMovementNew : MonoBehaviour {
     private float horizontalMove = 0f;
     private bool inJumpProcess = false;
     private bool wishToJump = false;
+    public bool bDeactivateControlls = false;
 
     const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
     private bool m_Grounded;            // Whether or not the player is grounded.
@@ -53,6 +54,13 @@ public class playerMovementNew : MonoBehaviour {
         // In case the calibration is not finished, stop here because there are no axes asigned
         if (calibration.instance.getIsCalibrationActive() || GameManager.instance.ColorCalibration.gameObject.activeInHierarchy)
             return;
+
+        // disable movement input (menu and death)
+        if (bDeactivateControlls)
+        {
+            horizontalMove = 0f;    // decrease the old force
+            return;
+        }
 
         // Get the players' input data
         horizontalMove = Input.GetAxisRaw(forceValueRL) * moveForce;
