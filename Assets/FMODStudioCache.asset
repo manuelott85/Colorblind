@@ -19,7 +19,7 @@ MonoBehaviour:
   - {fileID: 114933827388273172}
   MasterBankRef: {fileID: 114886043674853778}
   StringsBankRef: {fileID: 114667070307456478}
-  stringsBankWriteTime: 636723523607883440
+  stringsBankWriteTime: 636814355000585339
   cacheVersion: 2
 --- !u!114 &114073676583630526
 MonoBehaviour:
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: C:\Users\asus\Desktop\Colorblind\FMODAssets\ColorBlindFmod\Build\Desktop\Test.bank
-  lastModified: 636723523608172880
+  lastModified: 636814355001115291
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMODAssets\ColorBlindFmod\Build\Desktop\Master Bank.strings.bank
-  lastModified: 636723523607883440
+  lastModified: 636814355000585339
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -404,7 +404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: C:\Users\asus\Desktop\Colorblind\FMODAssets\ColorBlindFmod\Build\Desktop\Master
     Bank.bank
-  lastModified: 636723523607863528
+  lastModified: 636814355000575471
   LoadResult: 0
   FileSizes:
   - Name: Desktop
