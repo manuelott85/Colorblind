@@ -10488,6 +10488,7 @@ GameObject:
   - component: {fileID: 1027574845}
   - component: {fileID: 1027574844}
   - component: {fileID: 1027574843}
+  - component: {fileID: 1027574846}
   m_Layer: 0
   m_Name: Tilemap Green
   m_TagString: Untagged
@@ -14497,6 +14498,20 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1027574846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1027574841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29141dec8925c7488b90bcd0006eea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClassDescription: This component will register the objects' material to the colorCalibration
+    system. Only one option can be set to true! Only the first material is considered
+  colorSelected: 0
 --- !u!1001 &1049911697
 Prefab:
   m_ObjectHideFlags: 0
@@ -14800,6 +14815,7 @@ GameObject:
   - component: {fileID: 1425731297}
   - component: {fileID: 1425731296}
   - component: {fileID: 1425731295}
+  - component: {fileID: 1425731298}
   m_Layer: 0
   m_Name: Tilemap Red
   m_TagString: Untagged
@@ -19088,6 +19104,20 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1425731298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1425731293}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d29141dec8925c7488b90bcd0006eea7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClassDescription: This component will register the objects' material to the colorCalibration
+    system. Only one option can be set to true! Only the first material is considered
+  colorSelected: 1
 --- !u!1001 &1474730039
 Prefab:
   m_ObjectHideFlags: 0
